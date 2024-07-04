@@ -167,6 +167,12 @@ body {
   position: relative;
 }
 .frame-download__select {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
   background-color: #615D5D;
   color: white;
   font-size: 11px;
@@ -174,9 +180,17 @@ body {
   height: 18px;
   border-radius: 7px;
 }
+.frame-download__select::after {
+  content: url("../image/icons/arrow-select.svg");
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .frame-download__button {
   height: 18px;
   margin-right: 5px;
+  cursor: pointer;
 }
 .frame-download__list {
   position: absolute;
@@ -186,6 +200,14 @@ body {
   border-radius: 6px;
   border: 1px solid #FDCA40;
   width: 140px;
+  overflow: hidden;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.frame-download__list.open {
+  max-height: 800px;
+  visibility: visible;
 }
 .frame-download__item {
   color: white;

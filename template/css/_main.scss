@@ -177,17 +177,33 @@
   position: relative;
 
   &__select {
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
     background-color: #615D5D;
     color: white;
     font-size: 11px;
     width: 70px;
     height: 18px;
     border-radius: 7px;
+
+    &::after {
+      content: url("../image/icons/arrow-select.svg");
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__button {
     height: 18px;
     margin-right: 5px;
+    cursor: pointer;
   }
 
   &__list {
@@ -198,6 +214,16 @@
     border-radius: 6px;
     border: 1px solid #FDCA40;
     width: 140px;
+
+    overflow: hidden;
+    max-height: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &.open {
+      max-height: 800px;
+      visibility: visible;
+    }
   }
 
   &__item {
