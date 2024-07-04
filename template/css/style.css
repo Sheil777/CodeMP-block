@@ -44,15 +44,30 @@ body {
   padding-top: 80px;
   height: 250px;
 }
+@media (max-width: 540px) {
+  .frame {
+    height: 500px;
+  }
+}
 .frame__container {
   display: flex;
   background-color: #403F4E;
   border-radius: 17px;
   min-height: 77px;
 }
+@media (max-width: 540px) {
+  .frame__container {
+    flex-wrap: wrap;
+  }
+}
 .frame__column {
   flex-grow: 1;
   padding: 10px;
+}
+@media (max-width: 540px) {
+  .frame__column {
+    box-sizing: border-box;
+  }
 }
 .frame__header {
   position: relative;
@@ -96,6 +111,17 @@ body {
     flex: 0 0 26px;
   }
 }
+@media (max-width: 540px) {
+  .frame__logo {
+    box-sizing: border-box;
+    flex: 0 0 158px;
+  }
+}
+@media (max-width: 460px) {
+  .frame__logo {
+    flex: 0 0 110px;
+  }
+}
 .frame__logo img {
   height: 40px;
   margin-right: 14px;
@@ -110,11 +136,27 @@ body {
     height: 30px;
   }
 }
+@media (max-width: 540px) {
+  .frame__logo img {
+    margin-right: 14px;
+    height: 40px;
+  }
+}
 .frame__logo div.text {
   font-family: "SF Pro Display", sans-serif;
   color: #FFF;
 }
 @media (max-width: 888px) {
+  .frame__logo div.text {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .frame__logo div.text {
+    display: block;
+  }
+}
+@media (max-width: 460px) {
   .frame__logo div.text {
     display: none;
   }
@@ -156,6 +198,22 @@ body {
     background-color: rgba(253, 202, 64, 0.4);
   }
 }
+@media (max-width: 540px) {
+  .frame__limit .button {
+    width: 140px;
+  }
+  .frame__limit .button:has(.loading) {
+    background-color: #FDCA40;
+  }
+}
+@media (max-width: 375px) {
+  .frame__limit .button {
+    width: 96px;
+  }
+  .frame__limit .button:has(.loading) {
+    background-color: rgba(253, 202, 64, 0.4);
+  }
+}
 .frame__limit .button span {
   font-size: 11px;
   font-weight: bold;
@@ -178,6 +236,18 @@ body {
     transform: translateX(50%) translateY(-50%);
   }
 }
+@media (max-width: 540px) {
+  .frame__limit .button img.loading {
+    right: 5%;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 375px) {
+  .frame__limit .button img.loading {
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+  }
+}
 .frame__limit .button:hover span {
   transform: translateY(-2px);
   box-shadow: 0px 4px 8px -2px rgba(34, 60, 80, 0.2);
@@ -187,14 +257,49 @@ body {
   box-shadow: none;
   transition: none;
 }
+@media (max-width: 540px) {
+  .frame__limit {
+    flex: 0 0 160px;
+  }
+}
+@media (max-width: 375px) {
+  .frame__limit {
+    flex: 0 0 116px;
+  }
+}
+@media (max-width: 410px) {
+  .frame__coincidences {
+    flex: 1;
+  }
+}
 @media (max-width: 790px) {
   .frame__analys {
     flex: 0 0 90px;
   }
 }
+@media (max-width: 540px) {
+  .frame__analys {
+    flex: 0 0 158px;
+  }
+}
+@media (max-width: 460px) {
+  .frame__analys {
+    flex: 0 0 110px;
+  }
+}
 @media (max-width: 730px) {
   .frame__download {
     flex: 0 0 70px;
+  }
+}
+@media (max-width: 540px) {
+  .frame__download {
+    flex: 0 0 160px;
+  }
+}
+@media (max-width: 375px) {
+  .frame__download {
+    flex: 0 0 116px;
   }
 }
 .frame__instruction a {
@@ -210,11 +315,21 @@ body {
   margin-right: 10px;
   transition: color 0.3s;
 }
+@media (max-width: 325px) {
+  .frame__instruction a span {
+    display: none;
+  }
+}
 .frame__instruction a img {
   width: 30px;
 }
 .frame__instruction a:hover span {
   color: #D32322;
+}
+@media (max-width: 410px) {
+  .frame__instruction {
+    flex: 1;
+  }
 }
 
 .register {
@@ -356,4 +471,9 @@ body {
   font-family: "SF Pro Display", sans-serif;
   font-size: 11px;
   font-weight: 400;
+}
+@media (max-width: 540px) {
+  .clue__inner {
+    box-shadow: 0px 0px 8px 0px #FDCA40;
+  }
 }/*# sourceMappingURL=style.css.map */
