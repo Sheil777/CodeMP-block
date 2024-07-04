@@ -180,14 +180,58 @@ body {
 }
 .frame-download__list {
   position: absolute;
-  top: 18px;
+  top: 20px;
   background-color: #403F4E;
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #FDCA40;
+  width: 140px;
 }
 .frame-download__item {
   color: white;
   font-size: 12px;
   font-family: "SF Pro Display", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+.frame-download__item:last-child::after {
+  display: none;
+}
+.frame-download__item::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+  height: 1px;
+  background: rgba(217, 217, 217, 0.3);
+}
+.frame-download__label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.frame-download__label::after {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid #FDCA40;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.frame-download__label::before {
+  content: url("../image/icons/checked.svg");
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  transition: transform 0.3s;
+  transform: scale(0);
+}
+.frame-download__input {
+  display: none;
+}
+.frame-download__input:checked + .frame-download__label::before {
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
