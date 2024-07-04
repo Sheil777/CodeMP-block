@@ -107,4 +107,14 @@ body {
   right: 5%;
   transform: translateY(-50%);
   height: 16px;
+}
+.register {
+  display: flex;
+}
+.register__img {
+  height: 23px;
+}
+.register__value {
+  color: white;
+  font-size: 11px;
 }/*# sourceMappingURL=style.css.map */
