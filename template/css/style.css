@@ -56,6 +56,7 @@ body {
 .frame__header {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
 }
 .frame__delimiter {
   background-color: rgba(217, 217, 217, 0.3);
@@ -95,11 +96,16 @@ body {
   border-radius: 7px;
   width: 178px;
   height: 30px;
-  margin-top: 10px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+  cursor: pointer;
 }
 .frame__limit .button span {
   font-size: 11px;
   font-weight: bold;
+  transition: all 0.3s;
 }
 .frame__limit .button img {
   position: absolute;
@@ -108,11 +114,47 @@ body {
   transform: translateY(-50%);
   height: 16px;
 }
+.frame__limit .button:hover span {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px -2px rgba(34, 60, 80, 0.2);
+}
+.frame__limit .button:active span {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.frame__instruction a span {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 12px;
+  color: white;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+.frame__instruction a img {
+  width: 30px;
+}
+.frame__instruction a:hover span {
+  color: #D32322;
+}
+
 .register {
   display: flex;
+  align-items: center;
+  height: 30px;
+}
+.register__item {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.register__item:last-child {
+  margin-right: 0;
 }
 .register__img {
   height: 23px;
+}
+.register__img.h16 {
+  height: 16px;
 }
 .register__value {
   color: white;

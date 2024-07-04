@@ -16,6 +16,7 @@
   &__header {
     font-size: 11px;
     color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
   }
 
   &__delimiter {
@@ -64,11 +65,21 @@
       border-radius: 7px;
       width: 178px;
       height: 30px;
-      margin-top: 10px;
+
+      // Убираем выделение
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently */
+
+      cursor: pointer;
 
       span {
         font-size: 11px;
         font-weight: bold;
+        transition: all 0.3s;
       }
 
       img {
@@ -78,6 +89,22 @@
         transform: translateY(-50%);
         height: 16px;
       }
+
+      &:hover {
+        span {
+          transform: translateY(-2px);
+          box-shadow: 0px 4px 8px -2px rgba(34, 60, 80, 0.2);
+        }
+      }
+
+      &:active {
+        span {
+          transform: translateY(0);
+          box-shadow: none;
+        }
+      }
+
+      
     }
   }
 
@@ -91,18 +118,51 @@
   }
 
   &__instruction {
+    a {
+      span {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 12px;
+        color: white;
+        margin-right: 10px;
+
+        transition: color 0.3s;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      &:hover {
+        span {
+          color: #D32322;
+        }
+      }
+    }
   }
 }
 
 .register {
   display: flex;
+  align-items: center;
+  height: 30px;  
 
   &__item {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
+    &:last-child {
+      margin-right: 0;
+    }
   }  
 
   &__img {
     height: 23px;
+
+    &.h16 {
+      height: 16px;
+    }
   }
 
   &__value {
