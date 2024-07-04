@@ -42,6 +42,7 @@ body {
 
 .frame {
   padding-top: 80px;
+  height: 250px;
 }
 .frame__container {
   display: flex;
@@ -159,4 +160,34 @@ body {
 .register__value {
   color: white;
   font-size: 11px;
+}
+
+.frame-download {
+  display: flex;
+  position: relative;
+}
+.frame-download__select {
+  background-color: #615D5D;
+  color: white;
+  font-size: 11px;
+  width: 70px;
+  height: 18px;
+  border-radius: 7px;
+}
+.frame-download__button {
+  height: 18px;
+  margin-right: 5px;
+}
+.frame-download__list {
+  position: absolute;
+  top: 18px;
+  background-color: #403F4E;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #FDCA40;
+}
+.frame-download__item {
+  color: white;
+  font-size: 12px;
+  font-family: "SF Pro Display", sans-serif;
 }/*# sourceMappingURL=style.css.map */
