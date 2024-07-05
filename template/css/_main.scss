@@ -372,6 +372,8 @@
     height: 18px;
     border-radius: 7px;
 
+    -webkit-tap-highlight-color:transparent;
+
     &::after {
       content: url("../image/icons/arrow-select.svg");
       position: absolute;

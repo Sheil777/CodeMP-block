@@ -381,6 +381,7 @@ body {
   width: 70px;
   height: 18px;
   border-radius: 7px;
+  -webkit-tap-highlight-color: transparent;
 }
 .frame-download__select::after {
   content: url("../image/icons/arrow-select.svg");
