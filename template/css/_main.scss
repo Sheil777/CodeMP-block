@@ -1,6 +1,9 @@
 .frame {
   container-type: inline-size; 
   padding-bottom: 20px;
+
+  position: relative; // Чтобы выпадающий список был сверху нижних блоков
+  z-index: 100;
   
   // Нужно удалить при вставке на реальный сайт
   // padding-top: 80px;
@@ -468,7 +471,8 @@
 
 .clue {
   position: absolute;
-  bottom: 24px;
+  // bottom: 24px;
+  bottom: calc(100% + 13px);
   right: 0;
   // padding-bottom: 24px;
   visibility: hidden;

@@ -43,6 +43,8 @@ body {
 .frame {
   container-type: inline-size;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 100;
 }
 .frame__container {
   display: flex;
@@ -459,7 +461,7 @@ body {
 
 .clue {
   position: absolute;
-  bottom: 24px;
+  bottom: calc(100% + 13px);
   right: 0;
   visibility: hidden;
   opacity: 0;
