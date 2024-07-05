@@ -1,11 +1,13 @@
 .frame {
-  padding-top: 80px;
+  container-type: inline-size; 
+  padding-bottom: 20px;
   
   // Нужно удалить при вставке на реальный сайт
-  height: 250px;
-  @media (max-width: 540px) {
-    height: 500px;
-  }
+  // padding-top: 80px;
+  // height: 250px;
+  // @container (max-width: 540px) {
+  //   height: 500px;
+  // }
   /////////////////////////////////////////////
 
   &__container {
@@ -14,7 +16,7 @@
     border-radius: 17px;
     min-height: 77px;
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       flex-wrap: wrap;
     }
   }
@@ -22,8 +24,9 @@
   &__column {
     flex-grow: 1;
     padding: 10px;
+    box-sizing: content-box;
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       box-sizing: border-box;
     }
   }  
@@ -38,7 +41,7 @@
       margin-left: 5px;
       cursor: pointer;
 
-      @media (max-width: 790px) {
+      @container (max-width: 790px) {
         margin-left: 2px;
       }
 
@@ -62,39 +65,45 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: 888px) {
+    @container (max-width: 888px) {
       flex: 0 0 36px;
       padding-left: 10px;
     }
 
-    @media (max-width: 600px) {
+    @container (max-width: 600px) {
       flex: 0 0 26px;
     }
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       box-sizing: border-box;
-      flex: 0 0 158px;
+      flex: 0 0 164px;
+      // flex: 0 0 158px;
     }
 
-    @media (max-width: 460px) {
+    @container (max-width: 460px) {
       flex: 0 0 110px;
+      justify-content: center;
     }
 
     img {
       height: 40px;
       margin-right: 14px;
 
-      @media (max-width: 888px) {
+      @container (max-width: 888px) {
         margin-right: 0;
       }
 
-      @media (max-width: 600px) {
+      @container (max-width: 600px) {
         height: 30px;
       }
 
-      @media (max-width: 540px) {
+      @container (max-width: 540px) {
         margin-right: 14px;
         height: 40px;
+      }
+
+      @container (max-width: 460px) {
+        margin-right: 0;
       }
     }
 
@@ -102,15 +111,15 @@
       font-family: 'SF Pro Display', sans-serif;
       color: #FFF;
 
-      @media (max-width: 888px) {
+      @container (max-width: 888px) {
         display: none;
       }
 
-      @media (max-width: 540px) {
+      @container (max-width: 540px) {
         display: block;
       }
 
-      @media (max-width: 460px) {
+      @container (max-width: 460px) {
         display: none;
       }
 
@@ -149,11 +158,11 @@
 
       cursor: pointer;
 
-      @media (max-width: 940px) {
+      @container (max-width: 940px) {
         width: 140px;
       }
 
-      @media (max-width: 600px) {
+      @container (max-width: 600px) {
         width: 96px;
 
         &:has(.loading){
@@ -161,14 +170,14 @@
         }
       }
       
-      @media (max-width: 540px) {
+      @container (max-width: 540px) {
         width: 140px;
         &:has(.loading) {
           background-color: #FDCA40;
         }
       }
 
-      @media (max-width: 375px) {
+      @container (max-width: 375px) {
         width: 96px;
 
         &:has(.loading){
@@ -193,17 +202,17 @@
         &.loading {
           display: block;
 
-          @media (max-width: 600px) {
+          @container (max-width: 600px) {
             right: 50%;
             transform: translateX(50%) translateY(-50%);
           }
 
-          @media (max-width: 540px) {
+          @container (max-width: 540px) {
             right: 5%;
             transform: translateY(-50%);
           }
 
-          @media (max-width: 375px) {
+          @container (max-width: 375px) {
             right: 50%;
             transform: translateX(50%) translateY(-50%);
           }
@@ -227,45 +236,46 @@
       }  
     }
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       flex: 0 0 160px;      
     }
 
-    @media (max-width: 375px) {
+    @container (max-width: 375px) {
       flex: 0 0 116px;
     }
   }
 
   &__coincidences {
-    @media (max-width: 410px) {
+    @container (max-width: 410px) {
       flex: 1;
     }
   }
 
   &__analys {
-    @media (max-width: 790px) {
+    @container (max-width: 790px) {
       flex: 0 0 90px;
     }
 
-    @media (max-width: 540px) {
-      flex: 0 0 158px;
+    @container (max-width: 540px) {
+      flex: 0 0 164px;
+      // flex: 0 0 158px;
     }
 
-    @media (max-width: 460px) {
+    @container (max-width: 460px) {
       flex: 0 0 110px;
     }
   }
 
   &__download {
-    @media (max-width: 730px) {
+    @container (max-width: 730px) {
       flex: 0 0 70px;
     }
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       flex: 0 0 160px;      
     }
 
-    @media (max-width: 375px) {
+    @container (max-width: 375px) {
       flex: 0 0 116px;
     }
   }
@@ -285,7 +295,7 @@
 
         transition: color 0.3s;
 
-        @media (max-width: 325px) {
+        @container (max-width: 325px) {
           display: none;
         }
       }
@@ -301,7 +311,7 @@
       }
     }
 
-    @media (max-width: 410px) {
+    @container (max-width: 410px) {
       flex: 1;
     }
   }
@@ -475,7 +485,7 @@
     font-size: 11px;
     font-weight: 400;
 
-    @media (max-width: 540px) {
+    @container (max-width: 540px) {
       // border: 1px solid #FDCA40;
       box-shadow: 0px 0px 8px 0px #FDCA40;
     }
