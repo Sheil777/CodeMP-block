@@ -497,3 +497,37 @@
     }
   }
 }
+
+
+
+
+/////////////////////// popup /////////////////////////
+
+.popup-reviews {
+
+  &__body {
+  }
+
+  &__content {
+    padding: 0;
+    background: transparent;
+  }
+
+  &__header {
+  }
+}
+
+.popup-reviews-table {
+
+  &__header {
+    background-color: #403F4E;
+    border-radius: 3px;
+  }
+
+  &__list {
+  }
+
+  &__row {
+    background: white;
+  }
+}
