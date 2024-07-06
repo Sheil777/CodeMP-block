@@ -517,6 +517,14 @@
     @media (max-width: 900px) {
       width: 740px;
     }
+
+    @media (max-width: 768px) {
+      width: 540px;
+    }
+
+    @media (max-width: 576px) {
+      width: 420px;
+    }
   }
 
   &__header {
@@ -532,11 +540,19 @@
   justify-content: space-between;
   min-height: 49px;
 
+  @media (max-width: 576px) {
+    flex-wrap: wrap;
+  }
+
   &__logo {
     padding: 0 12px;
 
     img {
       width: 30px;
+
+      @media (max-width: 768px) {
+        width: 20px;
+      }
     }
   }
 
@@ -547,6 +563,17 @@
     justify-content: space-between;
     gap: 10px;
     margin-right: 14px;
+
+    padding: 8px 0;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      // flex: 0 0 160px;
+      // flex: 0 0 130px;
+      flex: 1;
+      flex-direction: column;
+      gap: 5px;
+    }
 
     span {
       color: white;
@@ -563,12 +590,32 @@
     font-size: 14px;
     font-weight: 600;
     border-radius: 4px;
+    text-align: center;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+    }
+
+    @media (max-width: 576px) {
+      align-items: end;
+    }
   }
 
   &__id {
     font-size: 14px;
     color: #848A92;
     margin-right: 15px;
+
+    @media (max-width: 576px) {
+      margin-right: 0;
+    }
   }
 
   &__count {
@@ -576,6 +623,10 @@
     align-items: center;
     gap: 10px;
     margin-right: 20px;
+
+    @media (max-width: 576px) {
+      margin-right: 0;
+    }
 
     img {
       width: 18px;
@@ -593,6 +644,10 @@
     margin-bottom: 3px;
     width: 1px;
     background-color: rgba(217,217,217,0.3);
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 
   &__center {
@@ -604,6 +659,20 @@
 
     @media (max-width: 900px) {
       flex: 0 0 200px
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 8px;
+      gap: 8px;
+      flex: 0 0 160px;
+    }
+
+    @media (max-width: 576px) {
+      order: 10;
+      flex: 0 0 100%;
+      justify-content: center;
+      box-sizing: border-box;
+      border-top: 2px solid rgba(217, 217, 217, 0.3);
     }
 
     img {
@@ -624,6 +693,11 @@
 
     @media (max-width: 900px) {
       padding-left: 14px;
+      padding-right: 18px;
+    }
+
+    @media (max-width: 576px) {
+      padding-left: 18px;
       padding-right: 18px;
     }
 
@@ -676,14 +750,26 @@
         flex: 0 0 90px;
         text-align: center;
 
+        // @media (max-width: 768px) {
+        //   flex: 0 0 60px;
+        // }
+
         img {
           margin-right: 8px;
+
+          // @media (max-width: 768px) {
+          //   margin-right: 2px;
+          // }
         }
       }
 
       &.data {
         flex: 0 0 115px;
         color: #848A92;
+
+        // @media (max-width: 768px) {
+        //   text-align: center;
+        // }
       }
 
       &.feedback {
@@ -694,6 +780,10 @@
         @media (max-width: 900px) {
           flex: 0 0 230px;
         }
+
+        // @media (max-width: 768px) {
+        //   flex: 0 0 190px;
+        // }
       }
 
       &.goods {
@@ -701,6 +791,10 @@
         padding-left: 30px;
         padding-right: 10px;
         box-sizing: border-box;
+
+        // @media (max-width: 768px) {
+        //   padding-left: 10px;
+        // }
 
         a {
           color: #8768AD;
@@ -741,6 +835,10 @@
     border-radius: 10px;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     .cell {
       font-weight: 600;
 
@@ -756,6 +854,11 @@
 
     // Scroll
     scrollbar-color: #FFF #403F4E;
+
+    @media (max-width: 768px) {
+      scrollbar-color: #403F4E #FFF;
+      height: 70vh;
+    }
   }
 
   &__row {
@@ -766,12 +869,46 @@
     align-items: stretch;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      border-radius: 10px;
+      padding: 10px 0;
+    }
+
     &:last-child {
       margin-bottom: 0px;
     }
 
     .cell {
-      
+      @media (max-width: 768px) {
+        flex: none !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px !important;
+
+        &:nth-child(odd){
+          background-color: white;
+        }
+
+        &:nth-child(even){
+          background-color: #EEEEEE;
+        }
+      }
+
+      &::before {
+        @media (max-width: 768px) {
+          flex: 0 0 140px;
+          content: attr(aria-label);
+          text-align: start;
+        }
+      }
+
+      .cell-inner {
+        @media (max-width: 768px) {
+          text-align: right;
+        }
+      }
     }
   }
 }
