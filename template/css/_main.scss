@@ -522,134 +522,6 @@
   }
 }
 
-.popup-reviews-table {
-
-  &__header {
-    display: flex;
-    align-items: stretch;
-
-    background: white;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    overflow: hidden;
-
-    .cell {
-      font-size: 14px;
-      color: #292D32;
-      font-weight: 600;
-      padding: 16px 0;
-      align-content: center;
-
-      &.stars {
-        flex: 0 0 135px;
-        text-align: center;
-      }
-
-      &.data {
-        flex: 0 0 145px;
-        text-align: center;
-      }
-
-      &.feedback {
-        flex: 0 0 265px;
-      }
-
-      &.goods {
-        flex: 0 0 140px;
-        padding-left: 30px;
-        box-sizing: border-box;
-      }
-
-      &.customer {
-        flex: 1;
-        padding-left: 25px;
-        box-sizing: border-box;
-      }
-
-      &.goods, &.customer {
-        background-color: #EEEEEE;
-      }
-    }
-  }
-
-  &__list {
-    height: 330px;
-    overflow-y: auto;
-
-    // Scroll
-    scrollbar-color: #FFF #403F4E;
-  }
-
-  &__row {
-    background: white;
-    border-radius: 10px 0 0 10px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: stretch;
-    overflow: hidden;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-
-    .cell {
-      font-size: 14px;
-      color: #292D32;
-      padding: 16px 0;
-      align-content: center;
-
-      &.stars {
-        flex: 0 0 135px;
-        text-align: center;
-
-        img {
-          margin-right: 8px;
-        }
-      }
-
-      &.data {
-        flex: 0 0 145px;
-        color: #848A92;
-      }
-
-      &.feedback {
-        flex: 0 0 265px;
-        padding-right: 10px;
-        box-sizing: border-box;
-      }
-
-      &.goods {
-        a {
-          color: #8768AD;
-        }
-
-        .goods-name {
-          margin-top: 5px;
-          color: #848A92;
-        }
-
-        flex: 0 0 160px;
-        padding-left: 30px;
-        padding-right: 10px;
-        box-sizing: border-box;
-      }
-
-      &.customer {
-        a {
-          color: #8768AD;
-        }
-
-        flex: 1;
-        box-sizing: border-box;
-      }
-
-      &.goods, &.customer {
-        background-color: #EEEEEE;
-      }
-    }
-  }
-}
-
 .popup-reviews-header {
   display: flex;
   align-items: center;
@@ -772,6 +644,116 @@
           background-color: #FDCA40;
         }
       }
+    }
+  }
+}
+
+//// Ячейки
+
+.popup-reviews-table__header, 
+.popup-reviews-table__row {
+  .cell {
+      font-size: 14px;
+      color: #292D32;
+      padding: 16px 0;
+      align-content: center;
+
+      &.stars {
+        flex: 0 0 135px;
+        text-align: center;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+
+      &.data {
+        flex: 0 0 145px;
+        color: #848A92;
+      }
+
+      &.feedback {
+        flex: 0 0 265px;
+        padding-right: 10px;
+        box-sizing: border-box;
+      }
+
+      &.goods {
+        a {
+          color: #8768AD;
+        }
+
+        .goods-name {
+          margin-top: 5px;
+          color: #848A92;
+        }
+
+        flex: 0 0 160px;
+        padding-left: 30px;
+        padding-right: 10px;
+        box-sizing: border-box;
+      }
+
+      &.customer {
+        a {
+          color: #8768AD;
+        }
+
+        flex: 1;
+        box-sizing: border-box;
+      }
+
+      &.goods, &.customer {
+        background-color: #EEEEEE;
+        box-sizing: border-box;
+      }
+  }
+}
+
+//// Ячейки
+
+.popup-reviews-table {
+
+  &__header {
+    display: flex;
+    align-items: stretch;
+
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .cell {
+      font-weight: 600;
+
+      &.data {
+        color: #292D32;
+      }
+    }
+  }
+
+  &__list {
+    height: 330px;
+    overflow-y: auto;
+
+    // Scroll
+    scrollbar-color: #FFF #403F4E;
+  }
+
+  &__row {
+    background: white;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .cell {
+      
     }
   }
 }
