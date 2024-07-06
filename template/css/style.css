@@ -68,6 +68,7 @@ body.lock {
   justify-content: center;
   align-items: center;
   padding: 30px 10px;
+  box-sizing: border-box;
 }
 .popup__content {
   background-color: #fff;
@@ -539,16 +540,18 @@ body.lock {
 
 .popup-reviews-table__header {
   display: flex;
+  align-items: stretch;
   background: white;
   margin-bottom: 5px;
   border-radius: 10px;
   overflow: hidden;
 }
 .popup-reviews-table__header .cell {
-  font-size: 14;
+  font-size: 14px;
   color: #292D32;
   font-weight: 600;
   padding: 16px 0;
+  align-content: center;
 }
 .popup-reviews-table__header .cell.stars {
   flex: 0 0 135px;
@@ -573,13 +576,67 @@ body.lock {
 }
 .popup-reviews-table__header .cell.goods, .popup-reviews-table__header .cell.customer {
   background-color: #EEEEEE;
-  display: block;
-  height: 100%;
+}
+.popup-reviews-table__list {
+  height: 330px;
+  overflow-y: auto;
+  scrollbar-color: #FFF #403F4E;
 }
 .popup-reviews-table__row {
   background: white;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   margin-bottom: 5px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.popup-reviews-table__row:last-child {
+  margin-bottom: 0px;
+}
+.popup-reviews-table__row .cell {
+  font-size: 14px;
+  color: #292D32;
+  padding: 16px 0;
+  align-content: center;
+}
+.popup-reviews-table__row .cell.stars {
+  flex: 0 0 135px;
+  text-align: center;
+}
+.popup-reviews-table__row .cell.stars img {
+  margin-right: 8px;
+}
+.popup-reviews-table__row .cell.data {
+  flex: 0 0 145px;
+  color: #848A92;
+}
+.popup-reviews-table__row .cell.feedback {
+  flex: 0 0 265px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.popup-reviews-table__row .cell.goods {
+  flex: 0 0 160px;
+  padding-left: 30px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.popup-reviews-table__row .cell.goods a {
+  color: #8768AD;
+}
+.popup-reviews-table__row .cell.goods .goods-name {
+  margin-top: 5px;
+  color: #848A92;
+}
+.popup-reviews-table__row .cell.customer {
+  flex: 1;
+  box-sizing: border-box;
+}
+.popup-reviews-table__row .cell.customer a {
+  color: #8768AD;
+}
+.popup-reviews-table__row .cell.goods, .popup-reviews-table__row .cell.customer {
+  background-color: #EEEEEE;
 }
 
 .popup-reviews-header {
@@ -589,7 +646,7 @@ body.lock {
   min-height: 49px;
 }
 .popup-reviews-header__logo {
-  padding: 12px;
+  padding: 0 12px;
 }
 .popup-reviews-header__logo img {
   width: 30px;
