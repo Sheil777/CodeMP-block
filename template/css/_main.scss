@@ -511,17 +511,18 @@
   &__content {
     padding: 0;
     background: transparent;
+    max-width: 825px;
   }
 
   &__header {
+    background-color: #403F4E;
+    border-radius: 3px;
   }
 }
 
 .popup-reviews-table {
 
   &__header {
-    background-color: #403F4E;
-    border-radius: 3px;
   }
 
   &__list {
@@ -529,5 +530,121 @@
 
   &__row {
     background: white;
+  }
+}
+
+.popup-reviews-header {
+  display: flex;
+  align-items: center;
+  min-height: 49px;
+
+  &__logo {
+    padding: 12px;
+    img {
+      width: 30px;
+    }
+  }
+
+  &__user {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-right: 14px;
+
+    span {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+  }
+
+  &__nick {
+    background-color: #FDCA40;
+    padding: 8px 13px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+
+  &__id {
+    font-size: 14px;
+    color: #848A92;
+    margin-right: 15px;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+
+    img {
+      width: 18px;
+    }
+
+    span {
+      font-size: 12px;
+      color: white;
+    }
+  }
+
+  &__delimiter {
+    min-height: inherit;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 1px;
+    background-color: rgba(217,217,217,0.3);
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 20px;
+    flex: 0 0 250px;  ///////// !!!!!!!!!!!!!!!!!!!!
+
+    img {
+      width: 25px;
+    }
+
+    span {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__close {
+    padding-left: 70px;
+    padding-right: 18px;
+
+    .popup-close {
+      position: relative;
+      height: 16px;
+      width: 16px;
+
+      &::after , &::before {
+        position: absolute;
+        top: -3px;
+        left: 8px;
+        display: block;
+        content: "";
+        height: 22px;
+        width: 1px;
+        background-color: white;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
   }
 }

@@ -528,11 +528,112 @@ body.lock {
 .popup-reviews__content {
   padding: 0;
   background: transparent;
+  max-width: 825px;
 }
-.popup-reviews-table__header {
+.popup-reviews__header {
   background-color: #403F4E;
   border-radius: 3px;
 }
+
 .popup-reviews-table__row {
   background: white;
+}
+
+.popup-reviews-header {
+  display: flex;
+  align-items: center;
+  min-height: 49px;
+}
+.popup-reviews-header__logo {
+  padding: 12px;
+}
+.popup-reviews-header__logo img {
+  width: 30px;
+}
+.popup-reviews-header__user {
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 14px;
+}
+.popup-reviews-header__user span {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "SF Pro Display", sans-serif;
+}
+.popup-reviews-header__nick {
+  background-color: #FDCA40;
+  padding: 8px 13px;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.popup-reviews-header__id {
+  font-size: 14px;
+  color: #848A92;
+  margin-right: 15px;
+}
+.popup-reviews-header__count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+.popup-reviews-header__count img {
+  width: 18px;
+}
+.popup-reviews-header__count span {
+  font-size: 12px;
+  color: white;
+}
+.popup-reviews-header__delimiter {
+  min-height: inherit;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 1px;
+  background-color: rgba(217, 217, 217, 0.3);
+}
+.popup-reviews-header__center {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 20px;
+  flex: 0 0 250px;
+}
+.popup-reviews-header__center img {
+  width: 25px;
+}
+.popup-reviews-header__center span {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.popup-reviews-header__close {
+  padding-left: 70px;
+  padding-right: 18px;
+}
+.popup-reviews-header__close .popup-close {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+.popup-reviews-header__close .popup-close::after, .popup-reviews-header__close .popup-close::before {
+  position: absolute;
+  top: -3px;
+  left: 8px;
+  display: block;
+  content: "";
+  height: 22px;
+  width: 1px;
+  background-color: white;
+}
+.popup-reviews-header__close .popup-close::after {
+  transform: rotate(45deg);
+}
+.popup-reviews-header__close .popup-close::before {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=style.css.map */
