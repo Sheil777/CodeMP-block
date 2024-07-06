@@ -511,18 +511,65 @@
   &__content {
     padding: 0;
     background: transparent;
-    max-width: 825px;
+    max-width: unset;
+    width: 825px;
   }
 
   &__header {
     background-color: #403F4E;
     border-radius: 3px;
+    margin-bottom: 8px;
   }
 }
 
 .popup-reviews-table {
 
   &__header {
+    display: flex;
+
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .cell {
+      font-size: 14;
+      color: #292D32;
+      font-weight: 600;
+      padding: 16px 0;
+
+      &.stars {
+        flex: 0 0 135px;
+        text-align: center;
+      }
+
+      &.data {
+        flex: 0 0 145px;
+        text-align: center;
+      }
+
+      &.feedback {
+        flex: 0 0 265px;
+      }
+
+      &.goods {
+        flex: 0 0 140px;
+        padding-left: 30px;
+        box-sizing: border-box;
+      }
+
+      &.customer {
+        flex: 1;
+        padding-left: 25px;
+        box-sizing: border-box;
+      }
+
+      &.goods, &.customer {
+        background-color: #EEEEEE;
+        display: block;
+        height: 100%;
+      }
+    }
   }
 
   &__list {
@@ -530,12 +577,15 @@
 
   &__row {
     background: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
   }
 }
 
 .popup-reviews-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   min-height: 49px;
 
   &__logo {
@@ -563,7 +613,7 @@
 
   &__nick {
     background-color: #FDCA40;
-    padding: 8px 13px;
+    padding: 6px 13px;
     color: black;
     font-size: 14px;
     font-weight: 600;
@@ -626,6 +676,7 @@
       position: relative;
       height: 16px;
       width: 16px;
+      cursor: pointer;
 
       &::after , &::before {
         position: absolute;
@@ -636,6 +687,7 @@
         height: 22px;
         width: 1px;
         background-color: white;
+        transition: background-color 0.3s;
       }
 
       &::after {
@@ -644,6 +696,12 @@
 
       &::before {
         transform: rotate(-45deg);
+      }
+      
+      &:hover {
+        &::after, &::before {
+          background-color: #FDCA40;
+        }
       }
     }
   }
