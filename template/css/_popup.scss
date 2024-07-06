@@ -36,8 +36,8 @@ body.lock {
         padding: 30px;
 
         // Анимация
-        // transform: translate(0px, -100%);
-        transform: perspective(600px) translate(0, -100%) rotate(45deg);
+        transform: translate(0px, -100%);
+        // transform: perspective(600px) translate(0, -100%) rotate(45deg);
         opacity: 0;
         transition: all 0.8s;
     }

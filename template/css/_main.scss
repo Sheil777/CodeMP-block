@@ -912,3 +912,39 @@
     }
   }
 }
+
+
+///// Кнопочки отзывов
+
+.button-feedback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 5px 8px;
+  border-radius: 7px;
+  background-color: #403F4E;
+  width: fit-content;
+  cursor: pointer;
+
+  &__img {
+    width: 16px;
+  }
+
+  &__count {
+    font-size: 11px;
+    color: white;
+  }
+
+  &.empty {
+    background-color: #DEDEDE;
+    cursor: default;
+
+    .button-feedback__img path {
+      fill: #505356;
+    }
+
+    .button-feedback__count {
+      color: #505356;
+    }
+  }
+}

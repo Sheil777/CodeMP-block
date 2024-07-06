@@ -74,7 +74,7 @@ body.lock {
   background-color: #fff;
   max-width: 800px;
   padding: 30px;
-  transform: perspective(600px) translate(0, -100%) rotate(45deg);
+  transform: translate(0px, -100%);
   opacity: 0;
   transition: all 0.8s;
 }
@@ -882,4 +882,33 @@ body.lock {
   .popup-reviews-table__row .cell .cell-inner {
     text-align: right;
   }
+}
+
+.button-feedback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 5px 8px;
+  border-radius: 7px;
+  background-color: #403F4E;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.button-feedback__img {
+  width: 16px;
+}
+.button-feedback__count {
+  font-size: 11px;
+  color: white;
+}
+.button-feedback.empty {
+  background-color: #DEDEDE;
+  cursor: default;
+}
+.button-feedback.empty .button-feedback__img path {
+  fill: #505356;
+}
+.button-feedback.empty .button-feedback__count {
+  color: #505356;
 }/*# sourceMappingURL=style.css.map */
