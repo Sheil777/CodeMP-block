@@ -513,6 +513,10 @@
     background: transparent;
     max-width: unset;
     width: 825px;
+
+    @media (max-width: 900px) {
+      width: 740px;
+    }
   }
 
   &__header {
@@ -596,7 +600,11 @@
     align-items: center;
     padding: 0 15px;
     gap: 20px;
-    flex: 0 0 250px;  ///////// !!!!!!!!!!!!!!!!!!!!
+    flex: 0 0 250px;
+
+    @media (max-width: 900px) {
+      flex: 0 0 200px
+    }
 
     img {
       width: 25px;
@@ -606,12 +614,18 @@
       color: white;
       font-size: 14px;
       font-weight: 600;
+      padding: 8px 0;
     }
   }
 
   &__close {
     padding-left: 70px;
     padding-right: 18px;
+
+    @media (max-width: 900px) {
+      padding-left: 14px;
+      padding-right: 18px;
+    }
 
     .popup-close {
       position: relative;
@@ -659,7 +673,7 @@
       align-content: center;
 
       &.stars {
-        flex: 0 0 135px;
+        flex: 0 0 90px;
         text-align: center;
 
         img {
@@ -668,7 +682,7 @@
       }
 
       &.data {
-        flex: 0 0 145px;
+        flex: 0 0 115px;
         color: #848A92;
       }
 
@@ -676,9 +690,18 @@
         flex: 0 0 265px;
         padding-right: 10px;
         box-sizing: border-box;
+
+        @media (max-width: 900px) {
+          flex: 0 0 230px;
+        }
       }
 
       &.goods {
+        flex: 0 0 200px;
+        padding-left: 30px;
+        padding-right: 10px;
+        box-sizing: border-box;
+
         a {
           color: #8768AD;
         }
@@ -687,11 +710,6 @@
           margin-top: 5px;
           color: #848A92;
         }
-
-        flex: 0 0 160px;
-        padding-left: 30px;
-        padding-right: 10px;
-        box-sizing: border-box;
       }
 
       &.customer {
