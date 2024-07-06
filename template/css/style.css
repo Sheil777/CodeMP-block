@@ -87,7 +87,7 @@ body.lock {
   container-type: inline-size;
   padding-bottom: 20px;
   position: relative;
-  z-index: 100;
+  z-index: 70;
 }
 .frame__container {
   display: flex;
@@ -885,7 +885,7 @@ body.lock {
 }
 
 .button-feedback {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 5px 10px 5px 8px;
@@ -894,6 +894,7 @@ body.lock {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  margin-right: auto;
 }
 .button-feedback__img {
   width: 16px;

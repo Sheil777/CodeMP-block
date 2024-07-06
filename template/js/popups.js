@@ -6,117 +6,120 @@
 // Фиксированным объектам (которые прыгают при открытии)
 // прописать .lock-padding
 
-const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-const popupCloseIcon = document.querySelectorAll('.popup-close');
+document.addEventListener("DOMContentLoaded", () =>{
 
-let unlock = true;
+    const popupLinks = document.querySelectorAll('.popup-link');
+    const body = document.querySelector('body');
+    const lockPadding = document.querySelectorAll('.lock-padding');
+    const popupCloseIcon = document.querySelectorAll('.popup-close');
 
-const timeout = 800; // transition в css
+    let unlock = true;
 
-// Открытие popup при клике на .popup-link
-if(popupLinks.length > 0) {
-    for(let index = 0; index < popupLinks.length; index++) {
-        const popupLink = popupLinks[index];
-        popupLink.addEventListener('click', function (e) {
-            const popupName = popupLink.getAttribute('href').replace('#', ''); // Имя popup который нужно открыть
-            const currentPopup = document.getElementById(popupName); // Popup который должны открыть
-            popupOpen(currentPopup);
-            e.preventDefault();
-        });
-    }
-}
+    const timeout = 800; // transition в css
 
-// Закрытие popup при клике на .popup-close
-if(popupCloseIcon.length > 0) {
-    for(let index = 0; index < popupCloseIcon.length; index++) {
-        const el = popupCloseIcon[index];
-        el.addEventListener('click', function (e) {
-            popupClose(el.closest('.popup'));
-            e.preventDefault();
-        });
-    }
-}
-
-function popupOpen(currentPopup) {
-    if(currentPopup && unlock){
-        // Если есть открытые popup'ы, то закрываем их
-        const popupActive = document.querySelector('.popup.open');
-        if(popupActive){
-            popupClose(popupActive, false);
-        } else {
-            bodyLock();
+    // Открытие popup при клике на .popup-link
+    if(popupLinks.length > 0) {
+        for(let index = 0; index < popupLinks.length; index++) {
+            const popupLink = popupLinks[index];
+            popupLink.addEventListener('click', function (e) {
+                const popupName = popupLink.getAttribute('href').replace('#', ''); // Имя popup который нужно открыть
+                const currentPopup = document.getElementById(popupName); // Popup который должны открыть
+                popupOpen(currentPopup);
+                e.preventDefault();
+            });
         }
+    }
 
-        // Открываем popup
-        currentPopup.classList.add('open');
+    // Закрытие popup при клике на .popup-close
+    if(popupCloseIcon.length > 0) {
+        for(let index = 0; index < popupCloseIcon.length; index++) {
+            const el = popupCloseIcon[index];
+            el.addEventListener('click', function (e) {
+                popupClose(el.closest('.popup'));
+                e.preventDefault();
+            });
+        }
+    }
 
-        // Добавляем событие для закрытия popup
-        currentPopup.addEventListener('click', function (e){
-            // Если у родителей нажатой области нет .popup__content, значит это темная область
-            if(!e.target.closest('.popup__content')) {
-                popupClose(e.target.closest('.popup'));
+    function popupOpen(currentPopup) {
+        if(currentPopup && unlock){
+            // Если есть открытые popup'ы, то закрываем их
+            const popupActive = document.querySelector('.popup.open');
+            if(popupActive){
+                popupClose(popupActive, false);
+            } else {
+                bodyLock();
             }
-        });
-    }
-}
 
-function bodyLock(){
-    const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
+            // Открываем popup
+            currentPopup.classList.add('open');
 
-    // Всем тегам с классом lockPadding добавляем справа отступ на ширину полосы скролла
-    if(lockPadding.length > 0) {
-        for (let index = 0; index < lockPadding.length; index++) {
-            const el = lockPadding[index];
-            // let paddingRight = getComputedStyle(el).paddingRight;
-            // el.style.paddingRight = parseInt(paddingRight) + parseInt(lockPaddingValue) + "px";
-            el.style.paddingRight = lockPaddingValue;
-            el.style.boxSizing = 'border-box'; // Моя дописка, вдруг в css его нет
+            // Добавляем событие для закрытия popup
+            currentPopup.addEventListener('click', function (e){
+                // Если у родителей нажатой области нет .popup__content, значит это темная область
+                if(!e.target.closest('.popup__content')) {
+                    popupClose(e.target.closest('.popup'));
+                }
+            });
         }
     }
-    body.style.paddingRight = lockPaddingValue;
-    body.classList.add('lock');
 
-    unlock = false;
-    setTimeout(function (){
-        unlock = true;
-    }, timeout);
-}
+    function bodyLock(){
+        const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
 
-function popupClose(popupActive, doUnlock = true){
-    if(unlock) {
-        popupActive.classList.remove('open');
-        if(doUnlock) {
-            bodyUnlock();
-        }
-    }
-}
-
-function bodyUnlock(){
-    setTimeout(function () {
+        // Всем тегам с классом lockPadding добавляем справа отступ на ширину полосы скролла
         if(lockPadding.length > 0) {
             for (let index = 0; index < lockPadding.length; index++) {
                 const el = lockPadding[index];
-                //el.style.paddingRight = '0px';
-                el.removeAttribute('style');
+                // let paddingRight = getComputedStyle(el).paddingRight;
+                // el.style.paddingRight = parseInt(paddingRight) + parseInt(lockPaddingValue) + "px";
+                el.style.paddingRight = lockPaddingValue;
+                el.style.boxSizing = 'border-box'; // Моя дописка, вдруг в css его нет
             }
         }
-        body.style.paddingRight = '0px';
-        if(document.querySelector(".header_phone") == null) // Если открыто мобильное меню
-            body.classList.remove('lock');
-    }, timeout);
+        body.style.paddingRight = lockPaddingValue;
+        body.classList.add('lock');
 
-    unlock = false;
-    setTimeout(function (){
-        unlock = true;
-    }, timeout);
-}
-
-// Закрытие popup по нажатию на кнопку Esc
-document.addEventListener('keydown', function (e){
-    if(e.which == 27) {
-        const popupActive = document.querySelector('.popup.open');
-        popupClose(popupActive);
+        unlock = false;
+        setTimeout(function (){
+            unlock = true;
+        }, timeout);
     }
+
+    function popupClose(popupActive, doUnlock = true){
+        if(unlock) {
+            popupActive.classList.remove('open');
+            if(doUnlock) {
+                bodyUnlock();
+            }
+        }
+    }
+
+    function bodyUnlock(){
+        setTimeout(function () {
+            if(lockPadding.length > 0) {
+                for (let index = 0; index < lockPadding.length; index++) {
+                    const el = lockPadding[index];
+                    //el.style.paddingRight = '0px';
+                    el.removeAttribute('style');
+                }
+            }
+            body.style.paddingRight = '0px';
+            if(document.querySelector(".header_phone") == null) // Если открыто мобильное меню
+                body.classList.remove('lock');
+        }, timeout);
+
+        unlock = false;
+        setTimeout(function (){
+            unlock = true;
+        }, timeout);
+    }
+
+    // Закрытие popup по нажатию на кнопку Esc
+    document.addEventListener('keydown', function (e){
+        if(e.which == 27) {
+            const popupActive = document.querySelector('.popup.open');
+            popupClose(popupActive);
+        }
+    });
 });
