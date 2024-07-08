@@ -783,6 +783,10 @@
         flex: 0 0 90px;
         text-align: center;
 
+        @media (max-width: 900px) {
+          flex: 0 0 70px;
+        }
+
         &.red {
           .cell-inner {
             display: inline-flex;
@@ -820,9 +824,9 @@
           line-height: 1.3;
         }
 
-        // @media (max-width: 768px) {
-        //   text-align: center;
-        // }
+        @media (max-width: 900px) {
+          text-align: center;
+        }
       }
 
       &.feedback {
@@ -866,6 +870,7 @@
       &.customer {
         a {
           color: #8768AD;
+          line-height: 1.3;
         }
 
         flex: 1;
@@ -903,6 +908,10 @@
 
       &.data {
         color: #292D32;
+        
+        @media (max-width: 900px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -913,10 +922,21 @@
     margin-right: 6px;
 
     // Scroll
-    scrollbar-color: #FFF #403F4E;
+    // scrollbar-color: #FFF #403F4E;
+    &::-webkit-scrollbar {
+      width: 14px;
+      background: #403F4E;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #FFF;
+      -webkit-border-radius: 4px;
+      // -webkit-width: 5px;
+      border: 3px solid #403F4E;
+    }
+
 
     @media (max-width: 768px) {
-      scrollbar-color: #403F4E #FFF;
+      // scrollbar-color: #403F4E #FFF;
       height: 70vh;
     }
   }
@@ -962,6 +982,10 @@
           flex: 0 0 140px;
           content: attr(aria-label);
           text-align: start;
+        }
+
+        @media (max-width: 360px) {
+          flex: 0 0 100px;
         }
       }
 
