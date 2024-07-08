@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     var div = document.querySelector(".frame-download__list"); // тут указываем ID элемента
     if (!div.isEqualNode(e.target) // если клик был не по нашему блоку
         && div.contains(e.target) == false) { // и не по его дочерним элементам
-        div.classList.remove("open")
+        if(!document.querySelector('.frame-download__select').isEqualNode(e.target)) // Исключение для кнопки открытия
+          div.classList.remove("open")
     }
   });
 });
