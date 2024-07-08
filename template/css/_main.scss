@@ -180,7 +180,7 @@
         width: 96px;
 
         &:has(.loading){
-          background-color: rgba(253, 202, 64, 0.4);
+          background-color: rgba(253, 202, 64, 0.4) !important;
         }
       }
       
@@ -195,7 +195,7 @@
         width: 96px;
 
         &:has(.loading){
-          background-color: rgba(253, 202, 64, 0.4);
+          background-color: rgba(253, 202, 64, 0.4) !important;
         }
       }
 

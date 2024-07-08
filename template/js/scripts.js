@@ -14,4 +14,13 @@ document.addEventListener("DOMContentLoaded", () =>{
       document.querySelector(".frame-limit__load").classList.remove('loading');
     }, 2500);
   });
+
+  // Убираем выпадашку, если кликнули мимо
+  document.addEventListener("mouseup", function (e) {
+    var div = document.querySelector(".frame-download__list"); // тут указываем ID элемента
+    if (!div.isEqualNode(e.target) // если клик был не по нашему блоку
+        && div.contains(e.target) == false) { // и не по его дочерним элементам
+        div.classList.remove("open")
+    }
+  });
 });

@@ -254,7 +254,7 @@ body.lock {
     width: 96px;
   }
   .frame__limit .button:has(.loading) {
-    background-color: rgba(253, 202, 64, 0.4);
+    background-color: rgba(253, 202, 64, 0.4) !important;
   }
 }
 @container (max-width: 540px) {
@@ -270,7 +270,7 @@ body.lock {
     width: 96px;
   }
   .frame__limit .button:has(.loading) {
-    background-color: rgba(253, 202, 64, 0.4);
+    background-color: rgba(253, 202, 64, 0.4) !important;
   }
 }
 .frame__limit .button span {
