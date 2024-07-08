@@ -51,7 +51,7 @@ body.lock {
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -779,6 +779,7 @@ body.lock {
   color: #292D32;
   padding: 8px 0;
   align-content: center;
+  margin: 0;
 }
 .popup-reviews-table__header .cell.stars,
 .popup-reviews-table__row .cell.stars {
