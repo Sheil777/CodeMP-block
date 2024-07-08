@@ -116,6 +116,16 @@ body.lock {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 10px;
 }
+@container (max-width: 790px) {
+  .frame__header {
+    min-height: 25px;
+  }
+}
+@container (max-width: 540px) {
+  .frame__header {
+    min-height: auto;
+  }
+}
 .frame__header img {
   margin-left: 5px;
   cursor: pointer;
@@ -344,9 +354,19 @@ body.lock {
     flex: 0 0 160px;
   }
 }
+@container (max-width: 460px) {
+  .frame__download .frame__header {
+    min-height: 18px;
+  }
+}
 @container (max-width: 375px) {
   .frame__download {
     flex: 0 0 116px;
+  }
+}
+@container (max-width: 460px) {
+  .frame__instruction .frame__header {
+    min-height: 18px;
   }
 }
 .frame__instruction a {
@@ -354,6 +374,7 @@ body.lock {
   flex-wrap: wrap;
   gap: 7px;
   align-items: center;
+  min-height: 30px;
 }
 .frame__instruction a span {
   font-family: "SF Pro Display", sans-serif;
@@ -407,9 +428,11 @@ body.lock {
 
 .frame-download {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 5px;
   position: relative;
+  min-height: 30px;
 }
 .frame-download__select {
   display: flex;
@@ -439,7 +462,7 @@ body.lock {
 }
 .frame-download__list {
   position: absolute;
-  top: 20px;
+  top: 28px;
   background-color: #403F4E;
   padding: 10px;
   border-radius: 6px;

@@ -40,6 +40,14 @@
     color: rgba(255,255,255,0.5);
     margin-bottom: 10px;
 
+    @container (max-width: 790px) {
+      min-height: 25px;
+    }
+
+    @container (max-width: 540px) {
+      min-height: auto;
+    }
+
     img {
       margin-left: 5px;
       cursor: pointer;
@@ -278,17 +286,30 @@
       flex: 0 0 160px;      
     }
 
+    @container (max-width: 460px) {
+      .frame__header {
+        min-height: 18px;
+      }
+    }
+
     @container (max-width: 375px) {
       flex: 0 0 116px;
     }
   }
 
   &__instruction {
+    @container (max-width: 460px) {
+      .frame__header {
+        min-height: 18px;
+      }
+    }
+
     a {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
       align-items: center;
+      min-height: 30px;
 
       span {
         font-family: 'SF Pro Display', sans-serif;
@@ -353,9 +374,11 @@
 
 .frame-download {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 5px;
   position: relative;
+  min-height: 30px;
 
   &__select {
     display: flex;
@@ -390,7 +413,7 @@
 
   &__list {
     position: absolute;
-    top: 20px;
+    top: 28px;
     background-color: #403F4E;
     padding: 10px;
     border-radius: 6px;
