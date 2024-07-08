@@ -985,8 +985,9 @@
   cursor: pointer;
   margin-right: auto;
 
-  &__img {
+  svg {
     width: 16px;
+    height: 16px;
   }
 
   &__count {

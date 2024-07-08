@@ -955,8 +955,9 @@ body.lock {
   cursor: pointer;
   margin-right: auto;
 }
-.button-feedback__img {
+.button-feedback svg {
   width: 16px;
+  height: 16px;
 }
 .button-feedback__count {
   font-size: 11px;
