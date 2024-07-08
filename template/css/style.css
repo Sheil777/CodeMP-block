@@ -786,8 +786,22 @@ body.lock {
   flex: 0 0 90px;
   text-align: center;
 }
-.popup-reviews-table__header .cell.stars img,
-.popup-reviews-table__row .cell.stars img {
+.popup-reviews-table__header .cell.stars.red .cell-inner,
+.popup-reviews-table__row .cell.stars.red .cell-inner {
+  display: inline-flex;
+  align-items: center;
+}
+.popup-reviews-table__header .cell.stars.red .cell-inner svg path,
+.popup-reviews-table__row .cell.stars.red .cell-inner svg path {
+  fill: #F03A47;
+}
+.popup-reviews-table__header .cell.stars.red .cell-inner span,
+.popup-reviews-table__row .cell.stars.red .cell-inner span {
+  color: #F03A47;
+}
+.popup-reviews-table__header .cell.stars img, .popup-reviews-table__header .cell.stars svg,
+.popup-reviews-table__row .cell.stars img,
+.popup-reviews-table__row .cell.stars svg {
   margin-right: 8px;
 }
 .popup-reviews-table__header .cell.data,
