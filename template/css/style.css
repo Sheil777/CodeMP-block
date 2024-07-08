@@ -617,7 +617,7 @@ body.lock {
 .popup-reviews-header__user span {
   color: white;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: "SF Pro Display", sans-serif;
 }
 .popup-reviews-header__nick {
@@ -625,7 +625,7 @@ body.lock {
   padding: 6px 13px;
   color: black;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 4px;
   text-align: center;
 }
@@ -808,6 +808,11 @@ body.lock {
 .popup-reviews-table__row .cell.data {
   flex: 0 0 115px;
   color: #848A92;
+  font-weight: 400;
+}
+.popup-reviews-table__header .cell.data .cell-inner,
+.popup-reviews-table__row .cell.data .cell-inner {
+  line-height: 1.3;
 }
 .popup-reviews-table__header .cell.feedback,
 .popup-reviews-table__row .cell.feedback {
@@ -820,6 +825,10 @@ body.lock {
   .popup-reviews-table__row .cell.feedback {
     flex: 0 0 230px;
   }
+}
+.popup-reviews-table__header .cell.feedback .cell-inner .text,
+.popup-reviews-table__row .cell.feedback .cell-inner .text {
+  line-height: 1.3;
 }
 .popup-reviews-table__header .cell.goods,
 .popup-reviews-table__row .cell.goods {
@@ -869,7 +878,7 @@ body.lock {
   }
 }
 .popup-reviews-table__header .cell {
-  font-weight: 600;
+  font-weight: 500 !important;
 }
 .popup-reviews-table__header .cell.data {
   color: #292D32;
