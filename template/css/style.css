@@ -573,7 +573,6 @@ body.lock {
 .popup-reviews__header {
   background-color: #403F4E;
   border-radius: 3px;
-  margin-bottom: 8px;
 }
 
 .popup-reviews-header {
@@ -766,11 +765,19 @@ body.lock {
   background-color: #FDCA40;
 }
 
+.popup-reviews-table__header,
+.popup-reviews-table__row {
+  border-bottom: 1px solid #EDEDED;
+}
+.popup-reviews-table__header:last-child,
+.popup-reviews-table__row:last-child {
+  border-bottom: none;
+}
 .popup-reviews-table__header .cell,
 .popup-reviews-table__row .cell {
   font-size: 14px;
   color: #292D32;
-  padding: 16px 0;
+  padding: 8px 0;
   align-content: center;
 }
 .popup-reviews-table__header .cell.stars,
@@ -827,15 +834,17 @@ body.lock {
 .popup-reviews-table__header .cell.goods, .popup-reviews-table__header .cell.customer,
 .popup-reviews-table__row .cell.goods,
 .popup-reviews-table__row .cell.customer {
-  background-color: #EEEEEE;
   box-sizing: border-box;
 }
 
+.popup-reviews-table {
+  background: white;
+  padding: 8px;
+}
 .popup-reviews-table__header {
   display: flex;
   align-items: stretch;
-  background: white;
-  margin-bottom: 5px;
+  background: #F0F0F0;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -853,6 +862,7 @@ body.lock {
 .popup-reviews-table__list {
   height: 330px;
   overflow-y: auto;
+  margin-right: 6px;
   scrollbar-color: #FFF #403F4E;
 }
 @media (max-width: 768px) {
@@ -874,6 +884,7 @@ body.lock {
     flex-direction: column;
     border-radius: 10px;
     padding: 10px 0;
+    margin-bottom: 0;
   }
 }
 .popup-reviews-table__row:last-child {

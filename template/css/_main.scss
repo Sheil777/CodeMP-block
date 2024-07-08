@@ -553,7 +553,6 @@
   &__header {
     background-color: #403F4E;
     border-radius: 3px;
-    margin-bottom: 8px;
   }
 }
 
@@ -763,10 +762,16 @@
 
 .popup-reviews-table__header, 
 .popup-reviews-table__row {
+  border-bottom: 1px solid #EDEDED;
+  &:last-child {
+    border-bottom: none;
+  }
+
   .cell {
       font-size: 14px;
       color: #292D32;
-      padding: 16px 0;
+      // padding: 16px 0;
+      padding: 8px 0;
       align-content: center;
 
       &.stars {
@@ -839,7 +844,7 @@
       }
 
       &.goods, &.customer {
-        background-color: #EEEEEE;
+        // background-color: #EEEEEE;
         box-sizing: border-box;
       }
   }
@@ -848,13 +853,15 @@
 //// Ячейки
 
 .popup-reviews-table {
+  background: white;
+  padding: 8px;
 
   &__header {
     display: flex;
     align-items: stretch;
 
-    background: white;
-    margin-bottom: 5px;
+    background: #F0F0F0;
+    // margin-bottom: 8px;
     border-radius: 10px;
     overflow: hidden;
 
@@ -874,6 +881,7 @@
   &__list {
     height: 330px;
     overflow-y: auto;
+    margin-right: 6px;
 
     // Scroll
     scrollbar-color: #FFF #403F4E;
@@ -896,6 +904,7 @@
       flex-direction: column;
       border-radius: 10px;
       padding: 10px 0;
+      margin-bottom: 0;
     }
 
     &:last-child {
