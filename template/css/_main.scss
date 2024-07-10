@@ -794,6 +794,12 @@
         flex: 0 0 90px;
         text-align: center;
 
+        .cell-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         @media (max-width: 900px) {
           flex: 0 0 70px;
         }

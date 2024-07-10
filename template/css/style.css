@@ -797,6 +797,12 @@ body.lock {
   flex: 0 0 90px;
   text-align: center;
 }
+.popup-reviews-table__header .cell.stars .cell-inner,
+.popup-reviews-table__row .cell.stars .cell-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 900px) {
   .popup-reviews-table__header .cell.stars,
   .popup-reviews-table__row .cell.stars {
