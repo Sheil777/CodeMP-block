@@ -925,7 +925,7 @@ body.lock {
   }
 }
 .popup-reviews-table__list {
-  height: 330px;
+  max-height: 430px;
   overflow-y: auto;
   margin-right: 6px;
 }
@@ -940,7 +940,7 @@ body.lock {
 }
 @media (max-width: 768px) {
   .popup-reviews-table__list {
-    height: 70vh;
+    max-height: 70vh;
   }
 }
 .popup-reviews-table__row {
