@@ -449,6 +449,10 @@ body.lock {
   height: 18px;
   border-radius: 7px;
   -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
 }
 .frame-download__select::after {
   content: url("../image/icons/arrow-select.svg");
@@ -475,7 +479,7 @@ body.lock {
   transition: all 0.5s;
 }
 .frame-download__list.open {
-  max-height: 200px;
+  max-height: 165px;
   visibility: visible;
 }
 .frame-download__item {

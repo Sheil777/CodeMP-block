@@ -401,6 +401,14 @@
 
     -webkit-tap-highlight-color:transparent;
 
+    // Убираем выделение
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+
     &::after {
       content: url("../image/icons/arrow-select.svg");
       position: absolute;
@@ -430,7 +438,7 @@
     transition: all 0.5s;
 
     &.open {
-      max-height: 200px;
+      max-height: 165px;
       visibility: visible;
     }
   }
