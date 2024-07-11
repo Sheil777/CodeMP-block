@@ -423,14 +423,9 @@
     cursor: pointer;
   }
 
-  &__list {
+  &__submenu {
     position: absolute;
     top: 28px;
-    background-color: #403F4E;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #FDCA40;
-    width: 140px;
 
     overflow: hidden;
     max-height: 0;
@@ -438,9 +433,18 @@
     transition: all 0.5s;
 
     &.open {
-      max-height: 165px;
+      max-height: 230px;
       visibility: visible;
     }
+
+  }
+
+  &__list {
+    background-color: #403F4E;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #FDCA40;
+    width: 140px;
   }
 
   &__item {

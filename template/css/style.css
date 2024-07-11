@@ -465,22 +465,24 @@ body.lock {
   height: 18px;
   cursor: pointer;
 }
-.frame-download__list {
+.frame-download__submenu {
   position: absolute;
   top: 28px;
-  background-color: #403F4E;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #FDCA40;
-  width: 140px;
   overflow: hidden;
   max-height: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
-.frame-download__list.open {
-  max-height: 165px;
+.frame-download__submenu.open {
+  max-height: 230px;
   visibility: visible;
+}
+.frame-download__list {
+  background-color: #403F4E;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #FDCA40;
+  width: 140px;
 }
 .frame-download__item {
   color: white;
