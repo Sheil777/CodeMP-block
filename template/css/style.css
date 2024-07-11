@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 img {
@@ -711,7 +712,7 @@ body.lock {
 }
 @media (max-width: 900px) {
   .popup-reviews-header__center {
-    flex: 0 0 200px;
+    flex: 0 0 210px;
   }
 }
 @media (max-width: 768px) {
@@ -1011,6 +1012,9 @@ body.lock {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  margin-right: 5px;
+}
+.button-feedback__block {
   margin-right: auto;
 }
 .button-feedback svg {

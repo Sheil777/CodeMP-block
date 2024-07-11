@@ -707,7 +707,7 @@
     }
 
     @media (max-width: 900px) {
-      flex: 0 0 200px
+      flex: 0 0 210px
     }
 
     @media (max-width: 768px) {
@@ -1045,7 +1045,11 @@
   background-color: #403F4E;
   width: fit-content;
   cursor: pointer;
-  margin-right: auto;
+  margin-right: 5px;
+
+  &__block {
+    margin-right: auto;
+  }
 
   svg {
     width: 16px;
