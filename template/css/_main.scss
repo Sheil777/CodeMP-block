@@ -955,7 +955,7 @@
     // max-height: 430px;
     min-height: 300px;
     max-height: 60vh;
-    
+
     overflow-y: auto;
     margin-right: 6px;
 
@@ -1048,9 +1048,12 @@
   background-color: #403F4E;
   width: fit-content;
   cursor: pointer;
-  margin-right: 5px;
 
   &__block {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+    gap: 8px;
     margin-right: auto;
   }
 
@@ -1075,5 +1078,18 @@
     .button-feedback__count {
       color: #505356;
     }
+
+    svg path {
+      fill: #403F4E;
+    }
   }
+}
+
+
+
+
+/* Сам WB */
+.feedback__header {
+  margin: 0 8px 0px 0 !important;
+  align-self: center !important;
 }

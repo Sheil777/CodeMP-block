@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1013,9 +1014,12 @@ body.lock {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  margin-right: 5px;
 }
 .button-feedback__block {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: center;
+  gap: 8px;
   margin-right: auto;
 }
 .button-feedback svg {
@@ -1035,4 +1039,13 @@ body.lock {
 }
 .button-feedback.empty .button-feedback__count {
   color: #505356;
+}
+.button-feedback.empty svg path {
+  fill: #403F4E;
+}
+
+/* Сам WB */
+.feedback__header {
+  margin: 0 8px 0px 0 !important;
+  align-self: center !important;
 }/*# sourceMappingURL=style.css.map */
