@@ -952,7 +952,10 @@
 
   &__list {
     // height: 330px;
-    max-height: 430px;
+    // max-height: 430px;
+    min-height: 300px;
+    max-height: 60vh;
+    
     overflow-y: auto;
     margin-right: 6px;
 
