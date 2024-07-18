@@ -905,11 +905,11 @@
 .popup-reviews-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: 49px;
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -925,10 +925,8 @@
   }
 
   &__user {
-    flex: 0 0 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 10px;
     margin-right: 14px;
 
@@ -969,9 +967,6 @@
       flex-direction: column;
       align-items: start;
       gap: 5px;
-    }
-
-    @media (max-width: 576px) {
       align-items: end;
     }
   }
@@ -1028,20 +1023,20 @@
 
     @media (max-width: 1130px) {
       // flex: 0 0 280px;
-      flex: 0 0 250px;
+      flex: unset;
     }
 
     @media (max-width: 900px) {
-      flex: 0 0 210px
+      flex: unset;
     }
+
+    // @media (max-width: 768px) {
+    //   padding: 0 8px;
+    //   gap: 8px;
+    //   flex: 0 0 160px;
+    // }
 
     @media (max-width: 768px) {
-      padding: 0 8px;
-      gap: 8px;
-      flex: 0 0 160px;
-    }
-
-    @media (max-width: 576px) {
       order: 10;
       flex: 0 0 100%;
       justify-content: center;
@@ -1062,12 +1057,17 @@
   }
 
   &__close {
-    padding-left: 70px;
+    // padding-left: 70px;
+    margin-left: auto;
     padding-right: 18px;
 
     @media (max-width: 900px) {
       padding-left: 14px;
       padding-right: 18px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: unset;
     }
 
     @media (max-width: 576px) {
