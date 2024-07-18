@@ -782,6 +782,26 @@
 
   &.codemp-frame__server-error {
     .frame__coincidences {
+      @container (max-width: 760px) {
+        flex: 0 0 100px;
+      }
+
+      @container (max-width: 620px) {
+        flex: 0 0 90px;
+      }
+
+      @container (max-width: 600px) {
+        flex: 0 0 100px;
+      }
+
+      @container (max-width: 560px) {
+        flex: 0 0 90px;
+      }
+
+      @container (max-width: 540px) {
+        flex: 1;
+      }
+
       .register {
         display: none;
       }

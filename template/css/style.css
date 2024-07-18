@@ -746,6 +746,31 @@ body.lock {
 .frame.codemp-frame__before-analys .frame__coincidences .start-analys {
   display: flex;
 }
+@container (max-width: 760px) {
+  .frame.codemp-frame__server-error .frame__coincidences {
+    flex: 0 0 100px;
+  }
+}
+@container (max-width: 620px) {
+  .frame.codemp-frame__server-error .frame__coincidences {
+    flex: 0 0 90px;
+  }
+}
+@container (max-width: 600px) {
+  .frame.codemp-frame__server-error .frame__coincidences {
+    flex: 0 0 100px;
+  }
+}
+@container (max-width: 560px) {
+  .frame.codemp-frame__server-error .frame__coincidences {
+    flex: 0 0 90px;
+  }
+}
+@container (max-width: 540px) {
+  .frame.codemp-frame__server-error .frame__coincidences {
+    flex: 1;
+  }
+}
 .frame.codemp-frame__server-error .frame__coincidences .register {
   display: none;
 }
