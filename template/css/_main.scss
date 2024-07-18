@@ -40,8 +40,13 @@
     color: rgba(255,255,255,0.5);
     margin-bottom: 10px;
 
-    @container (max-width: 790px) {
+    @container (max-width: 765px) {
       min-height: 25px;
+      margin-bottom: 0;
+    }
+
+    @container (max-width: 650px) {
+      margin-bottom: 5px;
     }
 
     @container (max-width: 540px) {
@@ -261,13 +266,25 @@
   }
 
   &__coincidences {
-    @container (max-width: 410px) {
+    @container (max-width: 760px) {
+      flex: 0 0 90px;
+    }
+
+    @container (max-width: 540px) {
       flex: 1;
+
+      & + .frame__delimiter {
+        display: none;
+      }
     }
   }
 
   &__analys {
     @container (max-width: 790px) {
+      flex: 0 0 140px;
+    }
+
+    @container (max-width: 690px) {
       flex: 0 0 90px;
     }
 
@@ -282,12 +299,28 @@
   }
 
   &__download {
-    @container (max-width: 730px) {
+    @container (max-width: 740px) {
+      flex: 0 0 95px;
+
+      .frame__header {
+        max-width: 70px;
+      }
+    }
+
+    @container (max-width: 690px) {
+      flex: 0 0 110px;
+    }
+
+    @container (max-width: 650px) {
       flex: 0 0 70px;
     }
 
     @container (max-width: 540px) {
-      flex: 0 0 160px;      
+      flex: 0 0 160px;    
+      
+      .frame__header {
+        max-width: unset;
+      }
     }
 
     @container (max-width: 460px) {
@@ -298,6 +331,10 @@
 
     @container (max-width: 375px) {
       flex: 0 0 116px;
+      
+      .frame__header {
+        max-width: 70px;
+      }
     }
   }
 
@@ -322,6 +359,18 @@
         margin-right: 10px;
 
         transition: color 0.3s;
+
+        @container (max-width: 790px) {
+          display: none;
+        }
+
+        @container (max-width: 540px) {
+          display: block;
+        }
+
+        @container (max-width: 460px) {
+          display: n;
+        }
 
         @container (max-width: 325px) {
           display: none;
