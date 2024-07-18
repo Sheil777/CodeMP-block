@@ -277,6 +277,30 @@
         display: none;
       }
     }
+
+    .start-analys {
+      display: none;
+      align-items: center;
+      height: 30px;
+
+      img {
+
+      }
+
+      span {
+        color: white;
+        font-size: 11px;
+        margin-left: 5px;
+      }
+    }
+
+    .codemp-error {
+      display: none;
+      color: white;
+      font-size: 11px;
+      max-width: 110px;
+      line-height: 1.4;
+    }
   }
 
   &__analys {
@@ -395,6 +419,8 @@
 }
 
 .frame-token {
+  display: none;
+
   .frame__header {
     display: flex;
     justify-content: space-between;
@@ -425,10 +451,13 @@
       font-size: 11px;
     }
 
+    &_small {
+      display: none;
+    }
   }
 
   &__img-correct {
-
+    display: none;
   }
 
   &__get-token {
@@ -460,6 +489,16 @@
 
     &.h16 {
       height: 16px;
+    }
+
+    &_disable {
+      display: none;
+
+      height: 23px;
+  
+      &.h16 {
+        height: 16px;
+      }
     }
   }
 
@@ -634,26 +673,32 @@
 .frame {
   &.codemp-frame__start {
     .frame__logo {
-      @container (max-width: 970px) {
-        flex: 0 0 36px;
-        padding-left: 10px;
-
-        img {
-          margin-right: 0;
-        }
-
-        .text {
-          display: none;
-        }
-      }
+      
     }
 
     .frame-token {
+      display: block;
       flex: 1 1 270px;
-      
-      @container (max-width: 860px){
-        flex: 0 0 170px;
+
+      @container (max-width: 740px){
+        &__input {
+          &_large {
+            display: none;
+          }
+  
+          &_small {
+            display: inline-block;
+          }
+        }
       }
+
+      @container (max-width: 540px) {
+        flex: 1 1 300px;
+      }
+
+      // @container (max-width: 470px) {
+      //   flex: 1 1 150px;
+      // }
     }
 
     .frame__limit {
@@ -665,22 +710,87 @@
     }
 
     .frame__analys {
+      .register__img {
+        display: none;
+
+        &_disable {
+          display: block;
+        }
+      }
+
+      .register__value {
+        display: none;
+      }
+
       @container (max-width: 710px) {
         flex: 0 0 90px;
+      }
+
+      @container (max-width: 540px) {
+        flex: 0 0 164px;
+      }
+
+      @container (max-width: 435px) {
+
       }
     }
 
     .frame__download {
-      @container (max-width: 810px) {
+      @container (max-width: 765px) {
         flex: 0 0 95px;
 
         .frame__header {
           max-width: 70px;
         }
       }
+
+      @container (max-width: 540px) {
+        flex: 0 0 130px;
+
+        .frame__header {
+          max-width: unset;
+        }
+      }
     }
   }
 
+  &.codemp-frame__before-analys {
+    .frame__analys {
+      .register__img {
+        display: none;
+
+        &_disable {
+          display: block;
+        }
+      }
+
+      .register__value {
+        display: none;
+      }
+    }
+
+    .frame__coincidences {
+      .register {
+        display: none;
+      }
+
+      .start-analys {
+        display: flex;
+      }
+    }
+  }
+
+  &.codemp-frame__server-error {
+    .frame__coincidences {
+      .register {
+        display: none;
+      }
+
+      .codemp-error {
+        display: block;
+      }
+    }
+  }
 }
 
 

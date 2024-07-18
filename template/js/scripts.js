@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>{
+  const frame = document.querySelector('.frame'); // Главный блок. Для подмены классов
+
   // Выпадающее меню
   document.querySelector(".frame-download__select").addEventListener('click', () => {
     document.querySelector(".frame-download__submenu").classList.toggle('open');
@@ -12,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     document.querySelector(".frame-limit__load").classList.add('loading');
     setTimeout(() => {
       document.querySelector(".frame-limit__load").classList.remove('loading');
+
+      // Подтягиваем данные
+      frame.classList.remove('codemp-frame__before-analys');
+      frame.classList.add('codemp-frame__statistic');
     }, 2500);
   });
 
@@ -24,4 +30,17 @@ document.addEventListener("DOMContentLoaded", () =>{
           div.classList.remove("open")
     }
   });
+
+  // Ввод токена
+  const lengthTokenForEnter = 15;
+  const inputToken = document.querySelector('.frame-token__input');
+  inputToken.addEventListener('input', () => {
+    let tokenLength = inputToken.value.length;
+    
+    if(tokenLength == lengthTokenForEnter){
+      frame.classList.remove('codemp-frame__start');
+      frame.classList.add('codemp-frame__before-analys');
+    }
+  });
+
 });

@@ -20,7 +20,9 @@
         </div>
         <!-- 
             codemp-frame__start
-
+            codemp-frame__before-analys
+            codemp-frame__statistic
+            codemp-frame__server-error
         -->
         <div class="frame codemp-frame__start">
             <div class="frame__container _container">
@@ -38,7 +40,8 @@
                         <a href="" class="frame-token__get-token">Получить API токен</a>
                     </h3>
                     <div class="frame-token__block">
-                        <input type="text" class="frame-token__input" placeholder="Введите токен из ЛК с сервиса codemp.ru">
+                        <input type="text" class="frame-token__input frame-token__input_large" placeholder="Введите токен из ЛК с сервиса codemp.ru">
+                        <input type="text" class="frame-token__input frame-token__input_small" placeholder="Введите токен из ЛК">
                         <img class="frame-token__img-correct" src="./template/image/icons/token-success.svg" alt="Зелёная галочка">
                     </div>
                 </section>
@@ -70,6 +73,13 @@
                             <span class="register__value">34</span>
                         </div>
                     </div>
+                    <div class="start-analys">
+                        <img src="./template/image/icons/arrow-left.svg" alt="Стрелка влево">
+                        <span>Запустите анализ</span>
+                    </div>
+                    <div class="codemp-error">
+                        Ошибка сервера, скоро починим :(
+                    </div>
                 </section>
                 <div class="frame__delimiter"></div>
                 <section class="frame__column frame__analys">
@@ -85,19 +95,24 @@
                     <div class="register">
                         <div class="register__item">
                             <img class="register__img" src="./template/image/icons/mouse.svg" alt="Мышка">
+                            <img class="register__img_disable" src="./template/image/icons/mouse-disable.svg" alt="Мышка">
                             <span class="register__value">4</span>
                         </div>
                         <div class="register__item">
                             <img class="register__img" src="./template/image/icons/money.svg" alt="Денежки">
+                            <img class="register__img_disable" src="./template/image/icons/money-disable.svg" alt="Денежки">
                             <span class="register__value">10</span>
                         </div>
                         <div class="register__item">
                             <img class="register__img" src="./template/image/icons/human-circle.svg" alt="Человек">
+                            <img class="register__img_disable" src="./template/image/icons/human-circle-disable.svg" alt="Человек">
                             <span class="register__value">20</span>
                         </div>
                     </div>
                 </section>
+
                 <div class="frame__delimiter"></div>
+
                 <section class="frame__column frame__download">
                     <h3 class="frame__header">
                         <span>Скачать отзывы</span>
@@ -207,7 +222,7 @@
                         </div>
                         <div class="popup-reviews-header__delimiter"></div>
                         <div class="popup-reviews-header__center">
-                            <img src="./template/image/icons/human-popup.png" alt="Иконка пользователя">
+                            <img src="./template/image/icons/human-circle.svg" alt="Иконка пользователя">
                             <span>Отзывы выглядят органично</span>
                         </div>
                         <div class="popup-reviews-header__delimiter"></div>
