@@ -18,7 +18,11 @@
                 <a href="./wb.html">Пример на WB</a>
             </div>
         </div>
-        <div class="frame">
+        <!-- 
+            codemp-frame__start
+
+        -->
+        <div class="frame codemp-frame__start">
             <div class="frame__container _container">
                 <section class="frame__column frame__logo">
                     <img src="./template/image/logo.png" alt="Логотип">
@@ -28,6 +32,16 @@
                     </div>
                 </section>
                 <div class="frame__delimiter"></div>
+                <section class="frame__column frame__token frame-token">
+                    <h3 class="frame__header">
+                        <span>API Токен</span>
+                        <a href="" class="frame-token__get-token">Получить API токен</a>
+                    </h3>
+                    <div class="frame-token__block">
+                        <input type="text" class="frame-token__input" placeholder="Введите токен из ЛК с сервиса codemp.ru">
+                        <img class="frame-token__img-correct" src="./template/image/icons/token-success.svg" alt="Зелёная галочка">
+                    </div>
+                </section>
                 <section class="frame__column frame__limit">
                     <h3 class="frame__header">
                         <span>Лимит проверок: 5/10</span>
