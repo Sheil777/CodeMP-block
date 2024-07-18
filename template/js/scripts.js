@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
       // Подтягиваем данные
       frame.classList.remove('codemp-frame__before-analys');
+      frame.classList.remove('codemp-frame__server-error');
       frame.classList.add('codemp-frame__statistic');
     }, 2500);
   });
@@ -37,10 +38,19 @@ document.addEventListener("DOMContentLoaded", () =>{
   inputToken.addEventListener('input', () => {
     let tokenLength = inputToken.value.length;
     
-    if(tokenLength == lengthTokenForEnter){
+    if(tokenLength >= lengthTokenForEnter){
       frame.classList.remove('codemp-frame__start');
       frame.classList.add('codemp-frame__before-analys');
     }
   });
 
+  // Демонстрация ошибки
+  if(document.querySelector('.callError')){
+    document.querySelector('.callError').addEventListener('click', () => {
+      frame.classList.remove('codemp-frame__start');
+      frame.classList.remove('codemp-frame__before-analys');
+      frame.classList.remove('codemp-frame__statistic');
+      frame.classList.add('codemp-frame__server-error');
+    });
+  }
 });
