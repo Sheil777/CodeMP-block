@@ -34,14 +34,16 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   // Ввод токена
   const lengthTokenForEnter = 15;
-  const inputToken = document.querySelector('.frame-token__input');
-  inputToken.addEventListener('input', () => {
-    let tokenLength = inputToken.value.length;
-    
-    if(tokenLength >= lengthTokenForEnter){
-      frame.classList.remove('codemp-frame__start');
-      frame.classList.add('codemp-frame__before-analys');
-    }
+  const inputTokens = document.querySelectorAll('.frame-token__input');
+  inputTokens.forEach(inputToken => {
+    inputToken.addEventListener('input', () => {
+      let tokenLength = inputToken.value.length;
+      
+      if(tokenLength >= lengthTokenForEnter){
+        frame.classList.remove('codemp-frame__start');
+        frame.classList.add('codemp-frame__before-analys');
+      }
+    });
   });
 
   // Демонстрация ошибки

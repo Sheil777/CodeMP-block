@@ -694,11 +694,37 @@
 
       @container (max-width: 540px) {
         flex: 1 1 300px;
+        
+        &__input {
+          &_large {
+            display: inline-block;
+          }
+  
+          &_small {
+            display: none;
+          }
+        }
       }
 
-      // @container (max-width: 470px) {
-      //   flex: 1 1 150px;
-      // }
+      @container (max-width: 470px) {
+        flex: 1 1 150px;
+      }
+
+      @container (max-width: 460px) {
+        flex: 1 1 190px;
+      }
+
+      @container (max-width: 380px) {
+        &__input {
+          &_large {
+            display: none;
+          }
+  
+          &_small {
+            display: inline-block;
+          }
+        }
+      }
     }
 
     .frame__limit {
@@ -710,6 +736,22 @@
     }
 
     .frame__analys {
+      @container (max-width: 710px) {
+        flex: 0 0 90px;
+      }
+
+      @container (max-width: 540px) {
+        flex: 0 0 164px;
+      }
+
+      @container (max-width: 435px) {
+        flex: 0 0 150px;
+      }
+
+      @container (max-width: 380px) {
+        flex: 0 0 110px;
+      }
+
       .register__img {
         display: none;
 
@@ -722,17 +764,6 @@
         display: none;
       }
 
-      @container (max-width: 710px) {
-        flex: 0 0 90px;
-      }
-
-      @container (max-width: 540px) {
-        flex: 0 0 164px;
-      }
-
-      @container (max-width: 435px) {
-
-      }
     }
 
     .frame__download {
@@ -750,6 +781,20 @@
         .frame__header {
           max-width: unset;
         }
+      }
+    }
+
+    .frame__instruction {
+      @container (max-width: 340px) {
+        a span {
+          display: none;
+        }
+      }
+    }
+
+    .frame__header {
+      @container (max-width: 460px) {
+        min-height: auto;
       }
     }
   }

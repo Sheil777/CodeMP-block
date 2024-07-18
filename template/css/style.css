@@ -688,20 +688,35 @@ body.lock {
   .frame.codemp-frame__start .frame-token {
     flex: 1 1 300px;
   }
+  .frame.codemp-frame__start .frame-token__input_large {
+    display: inline-block;
+  }
+  .frame.codemp-frame__start .frame-token__input_small {
+    display: none;
+  }
+}
+@container (max-width: 470px) {
+  .frame.codemp-frame__start .frame-token {
+    flex: 1 1 150px;
+  }
+}
+@container (max-width: 460px) {
+  .frame.codemp-frame__start .frame-token {
+    flex: 1 1 190px;
+  }
+}
+@container (max-width: 380px) {
+  .frame.codemp-frame__start .frame-token__input_large {
+    display: none;
+  }
+  .frame.codemp-frame__start .frame-token__input_small {
+    display: inline-block;
+  }
 }
 .frame.codemp-frame__start .frame__limit {
   display: none;
 }
 .frame.codemp-frame__start .frame__coincidences {
-  display: none;
-}
-.frame.codemp-frame__start .frame__analys .register__img {
-  display: none;
-}
-.frame.codemp-frame__start .frame__analys .register__img_disable {
-  display: block;
-}
-.frame.codemp-frame__start .frame__analys .register__value {
   display: none;
 }
 @container (max-width: 710px) {
@@ -714,7 +729,25 @@ body.lock {
     flex: 0 0 164px;
   }
 }
-@container (max-width: 435px) {}
+@container (max-width: 435px) {
+  .frame.codemp-frame__start .frame__analys {
+    flex: 0 0 150px;
+  }
+}
+@container (max-width: 380px) {
+  .frame.codemp-frame__start .frame__analys {
+    flex: 0 0 110px;
+  }
+}
+.frame.codemp-frame__start .frame__analys .register__img {
+  display: none;
+}
+.frame.codemp-frame__start .frame__analys .register__img_disable {
+  display: block;
+}
+.frame.codemp-frame__start .frame__analys .register__value {
+  display: none;
+}
 @container (max-width: 765px) {
   .frame.codemp-frame__start .frame__download {
     flex: 0 0 95px;
@@ -729,6 +762,16 @@ body.lock {
   }
   .frame.codemp-frame__start .frame__download .frame__header {
     max-width: unset;
+  }
+}
+@container (max-width: 340px) {
+  .frame.codemp-frame__start .frame__instruction a span {
+    display: none;
+  }
+}
+@container (max-width: 460px) {
+  .frame.codemp-frame__start .frame__header {
+    min-height: auto;
   }
 }
 @container (max-width: 410px) {
