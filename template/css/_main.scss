@@ -755,6 +755,12 @@
   }
 
   &.codemp-frame__before-analys {
+    .frame__header {
+      @container (max-width: 410px) {
+        min-height: 24px;
+      }
+    }
+
     .frame__analys {
       .register__img {
         display: none;

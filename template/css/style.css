@@ -731,6 +731,11 @@ body.lock {
     max-width: unset;
   }
 }
+@container (max-width: 410px) {
+  .frame.codemp-frame__before-analys .frame__header {
+    min-height: 24px;
+  }
+}
 .frame.codemp-frame__before-analys .frame__analys .register__img {
   display: none;
 }
