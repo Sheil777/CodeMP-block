@@ -434,11 +434,6 @@ body.lock {
     display: block;
   }
 }
-@container (max-width: 460px) {
-  .frame__instruction a span {
-    display: n;
-  }
-}
 @container (max-width: 325px) {
   .frame__instruction a span {
     display: none;

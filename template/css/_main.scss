@@ -331,7 +331,7 @@
 
     @container (max-width: 375px) {
       flex: 0 0 116px;
-      
+
       .frame__header {
         max-width: 70px;
       }
@@ -368,9 +368,9 @@
           display: block;
         }
 
-        @container (max-width: 460px) {
-          display: n;
-        }
+        // @container (max-width: 460px) {
+        //   display: n;
+        // }
 
         @container (max-width: 325px) {
           display: none;
