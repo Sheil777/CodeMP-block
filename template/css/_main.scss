@@ -1051,7 +1051,7 @@
     span {
       color: white;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 400;
       padding: 8px 0;
     }
   }
@@ -1247,15 +1247,14 @@
 
 .popup-reviews-table {
   background: white;
-  padding: 8px;
+  padding-top: 8px;
 
   &__header {
     display: flex;
     align-items: stretch;
 
-    background: #F0F0F0;
+    background: #DCDCDC;
     // margin-bottom: 8px;
-    border-radius: 10px;
     overflow: hidden;
 
     @media (max-width: 768px) {
@@ -1263,7 +1262,7 @@
     }
 
     .cell {
-      font-weight: 500 !important;
+      font-weight: 700 !important;
 
       &.data {
         color: #292D32;
@@ -1276,13 +1275,13 @@
   }
 
   &__list {
-    // height: 330px;
-    // max-height: 430px;
-    min-height: 300px;
-    max-height: 60vh;
+    // height: 400px;
+    max-height: 400px;
+    // min-height: 300px;
+    // max-height: 60vh;
 
     overflow-y: auto;
-    margin-right: 6px;
+    // margin-right: 6px;
 
     // Scroll
     // scrollbar-color: #FFF #403F4E;

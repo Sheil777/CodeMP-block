@@ -993,7 +993,7 @@ body.lock {
 .popup-reviews-header__center span {
   color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 8px 0;
 }
 .popup-reviews-header__close {
@@ -1167,13 +1167,12 @@ body.lock {
 
 .popup-reviews-table {
   background: white;
-  padding: 8px;
+  padding-top: 8px;
 }
 .popup-reviews-table__header {
   display: flex;
   align-items: stretch;
-  background: #F0F0F0;
-  border-radius: 10px;
+  background: #DCDCDC;
   overflow: hidden;
 }
 @media (max-width: 768px) {
@@ -1182,7 +1181,7 @@ body.lock {
   }
 }
 .popup-reviews-table__header .cell {
-  font-weight: 500 !important;
+  font-weight: 700 !important;
 }
 .popup-reviews-table__header .cell.data {
   color: #292D32;
@@ -1193,10 +1192,8 @@ body.lock {
   }
 }
 .popup-reviews-table__list {
-  min-height: 300px;
-  max-height: 60vh;
+  max-height: 400px;
   overflow-y: auto;
-  margin-right: 6px;
 }
 .popup-reviews-table__list::-webkit-scrollbar {
   width: 14px;
