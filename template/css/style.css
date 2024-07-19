@@ -1232,6 +1232,12 @@ body.lock {
   background: white;
   padding-top: 8px;
 }
+@media (max-width: 768px) {
+  .popup-reviews-table {
+    padding-top: 0;
+    background: transparent;
+  }
+}
 .popup-reviews-table__header {
   display: flex;
   align-items: stretch;
@@ -1284,9 +1290,9 @@ body.lock {
   .popup-reviews-table__row {
     flex-wrap: wrap;
     gap: 1px;
-    border-radius: 10px;
-    padding: 10px 0;
-    margin-bottom: 0;
+    border-radius: 0px;
+    padding: 0;
+    margin-bottom: 5px;
   }
 }
 .popup-reviews-table__row:last-child {
@@ -1309,12 +1315,7 @@ body.lock {
     text-align: start;
     color: #797979;
     font-weight: bold;
-    font-size: 10px;
-  }
-}
-@media (max-width: 360px) {
-  .popup-reviews-table__row .cell::before {
-    flex: 0 0 100px;
+    font-size: 11px;
   }
 }
 
