@@ -919,7 +919,7 @@
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   &__logo {
@@ -946,8 +946,8 @@
     @media (max-width: 768px) {
       // flex: 0 0 160px;
       // flex: 0 0 130px;
-      flex: 1;
-      flex-direction: column;
+      // flex: 1;
+      // flex-direction: column;
       gap: 5px;
     }
 
@@ -974,10 +974,14 @@
     align-items: center;
 
     @media (max-width: 768px) {
-      flex-direction: column;
+      // flex-direction: column;
       align-items: start;
       gap: 5px;
       align-items: end;
+
+      & + .popup-reviews-header__delimiter {
+        margin-left: auto;
+      }
     }
   }
 
@@ -1018,9 +1022,9 @@
     width: 1px;
     background-color: rgba(217,217,217,0.3);
 
-    @media (max-width: 576px) {
-      display: none;
-    }
+    // @media (max-width: 576px) {
+    //   display: none;
+    // }
   }
 
   &__center {
