@@ -318,6 +318,10 @@
     }
 
     @container (max-width: 460px) {
+      flex: 0 0 160px;
+    }
+
+    @container (max-width: 355px) {
       flex: 0 0 110px;
     }
   }
@@ -348,6 +352,8 @@
     }
 
     @container (max-width: 460px) {
+      flex: 0 0 125px;
+
       .frame__header {
         min-height: 18px;
       }
@@ -412,8 +418,12 @@
       }
     }
 
-    @container (max-width: 410px) {
+    @container (max-width: 420px) {
       flex: 1;
+
+      a span {
+        display: none;
+      }
     }
   }
 }

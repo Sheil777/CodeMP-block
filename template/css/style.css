@@ -380,6 +380,11 @@ body.lock {
 }
 @container (max-width: 460px) {
   .frame__analys {
+    flex: 0 0 160px;
+  }
+}
+@container (max-width: 355px) {
+  .frame__analys {
     flex: 0 0 110px;
   }
 }
@@ -410,6 +415,9 @@ body.lock {
   }
 }
 @container (max-width: 460px) {
+  .frame__download {
+    flex: 0 0 125px;
+  }
   .frame__download .frame__header {
     min-height: 18px;
   }
@@ -462,9 +470,12 @@ body.lock {
 .frame__instruction a:hover span {
   color: #D32322;
 }
-@container (max-width: 410px) {
+@container (max-width: 420px) {
   .frame__instruction {
     flex: 1;
+  }
+  .frame__instruction a span {
+    display: none;
   }
 }
 
