@@ -919,6 +919,10 @@ body.lock {
 @media (max-width: 768px) {
   .popup-reviews-header {
     flex-wrap: wrap;
+    height: unset;
+    min-height: 89px;
+    border-radius: 0;
+    padding-right: 0;
   }
 }
 .popup-reviews-header__logo {
@@ -927,14 +931,8 @@ body.lock {
 .popup-reviews-header__logo img {
   width: 30px;
 }
-@media (max-width: 768px) {
-  .popup-reviews-header__logo img {
-    width: 20px;
-  }
-}
 .popup-reviews-header__user {
   display: flex;
-  align-items: center;
   gap: 4px;
   margin-right: 40px;
   font-weight: 500;
@@ -943,7 +941,8 @@ body.lock {
 }
 @media (max-width: 768px) {
   .popup-reviews-header__user {
-    gap: 5px;
+    flex-direction: column;
+    gap: 2px;
   }
 }
 .popup-reviews-header__user span {
@@ -955,6 +954,7 @@ body.lock {
   color: #F5CC5C;
   font-size: 14px;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 .popup-reviews-header__nick span {
   font-weight: 400;
@@ -981,13 +981,15 @@ body.lock {
   margin-right: 15px;
   font-size: 15px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .popup-reviews-header__count {
+    margin-left: auto;
+    padding-right: 53px;
     margin-right: 0;
   }
 }
 .popup-reviews-header__count img {
-  width: 18px;
+  width: 24px;
 }
 .popup-reviews-header__count span {
   color: white;
@@ -996,6 +998,11 @@ body.lock {
   min-height: inherit;
   width: 1px;
   background-color: rgba(217, 217, 217, 0.3);
+}
+@media (max-width: 768px) {
+  .popup-reviews-header__delimiter {
+    display: none;
+  }
 }
 .popup-reviews-header__center {
   display: flex;
@@ -1008,18 +1015,14 @@ body.lock {
     flex: unset;
   }
 }
-@media (max-width: 900px) {
-  .popup-reviews-header__center {
-    flex: unset;
-  }
-}
 @media (max-width: 768px) {
   .popup-reviews-header__center {
     order: 10;
     flex: 0 0 100%;
-    justify-content: center;
-    box-sizing: border-box;
-    border-top: 2px solid rgba(217, 217, 217, 0.3);
+    padding-left: 16px;
+    background-color: #51CB20;
+    color: white;
+    margin-top: auto;
   }
 }
 .popup-reviews-header__center img {
@@ -1031,6 +1034,13 @@ body.lock {
   font-weight: 400;
   padding: 8px 0;
   color: inherit;
+}
+@media (max-width: 768px) {
+  .popup-reviews-header__close {
+    right: 8px;
+    top: 8px;
+    transform: unset;
+  }
 }
 
 .popup-reviews-table__header,
