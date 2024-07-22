@@ -881,10 +881,29 @@
   &__content {
     background-color: #F5F5F5;
     border-radius: 12px;
-    // font-family: "Inter", sans-serif;
+
+    padding: 0;
+    max-width: unset;
+    width: 1070px;
+
+    @media (max-width: 1130px) {
+      width: 830px;
+    }
+
+    @media (max-width: 900px) {
+      width: 740px;
+    }
 
     @media (max-width: 768px) {
+      width: 540px;
       border-radius: 0;
+    }
+
+    @media (max-width: 576px) {
+      width: 420px;
+    }
+
+    @media (max-width: 768px) {
     }
   }
 
@@ -895,6 +914,14 @@
     margin-top: -1px;
     height: 67px;
     padding-right: 46px;
+  }
+
+  &__logo {
+    padding: 0 16px;
+
+    img {
+      width: 30px;
+    }
   }
 
   &__close {
@@ -960,33 +987,14 @@
 .popup-reviews {
 
   &__body {
+
   }
 
   &__content {
-    padding: 0;
-    max-width: unset;
-    // width: 825px;
-    width: 1070px;
-
-    @media (max-width: 1130px) {
-      width: 830px;
-    }
-
-    @media (max-width: 900px) {
-      width: 740px;
-    }
-
-    @media (max-width: 768px) {
-      width: 540px;
-      // background-color: transparent;
-    }
-
-    @media (max-width: 576px) {
-      width: 420px;
-    }
   }
 
   &__header {
+
   }
 }
 
@@ -1006,11 +1014,7 @@
   }
 
   &__logo {
-    padding: 0 16px;
-
-    img {
-      width: 30px;
-    }
+    
   }
 
   &__user {
@@ -1461,6 +1465,193 @@
 }
 
 
+
+/// Второй попап
+
+.popup-codemp-analysis {
+
+  &__body {
+  }
+
+  &__content {
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__logo {
+  }
+
+  &__popup-name {
+    color: white;
+    font-weight: 600; // Semi-Bold
+    font-size: 15px;
+  }
+
+  &__main {
+    padding: 16px;
+    padding-bottom: 0;
+  }
+}
+
+.popup-codemp-analysis-main {
+  &__description {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    border-radius: 8px;
+    background-color: #E5FFEC;
+    padding-right: 160px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+
+    img {
+      width: 28px;
+    }
+
+    span {
+      font-size: 12px;
+      // font-weight: 400; // Regular
+      line-height: 135%;
+    }
+  }
+
+  &__search {
+    margin-top: 16px;
+
+    .codemp-header {
+      font-size: 14px;
+
+    }
+
+    .codemp-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+
+      input[type='text'] {
+        flex: 0 1 572px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #E3E3E3;
+        padding: 0 16px;
+        font-size: 14px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+
+      .codemp-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        background-color: #FDCA40;
+        padding: 10px 24px;
+        border-radius: 8px;
+
+        transition: all 0.4s;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ffdd81;
+        }
+
+        img {
+          height: 20px;
+        }
+
+        span {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 600; // Semi-Bold
+          color: #292D32;
+        }
+      }
+    }
+    
+  }
+
+  &__table {
+    margin-top: 24px;
+  }
+
+  &__header, &__row {
+    display: flex;
+    align-items: center;
+
+    .codemp-customer {
+      flex: 0 0 305px;
+      padding-left: 38px;
+    }
+    .codemp-count {
+      flex: 0 0 175px;
+    }
+    .codemp-sum {
+      flex: 0 0 175px;
+    }
+    .codemp-niche {
+      flex: 0 0 175px;
+
+    }
+    .codemp-select {
+      flex: 1;
+    }    
+  }
+
+  &__header {
+    background-color: #F0F0F0;
+    min-height: 48px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600; // Semi-Bold
+  }
+
+  &__list {
+
+  }
+
+  &__row {
+    background-color: white;
+    min-height: 72px;
+    border-radius: 8px;
+    margin-top: 4px;
+
+    .codemp-niche {
+      img {
+        display: none;
+        width: 24px;
+      }
+
+      &.codemp-true {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///// Кнопочки отзывов
 
 .button-feedback {
@@ -1508,6 +1699,14 @@
     }
   }
 }
+
+
+
+
+
+
+
+
 
 
 
