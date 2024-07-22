@@ -1026,7 +1026,7 @@ body.lock {
   }
 }
 .popup-reviews-header__center img {
-  width: 25px;
+  width: 32px;
 }
 .popup-reviews-header__center span {
   color: white;
@@ -1068,13 +1068,14 @@ body.lock {
 }
 .popup-reviews-table__header .cell.stars,
 .popup-reviews-table__row .cell.stars {
-  flex: 0 0 90px;
-  text-align: center;
+  flex: 0 0 113px;
+  text-align: start;
+  padding-left: 20px;
 }
 .popup-reviews-table__header .cell.stars .cell-inner,
 .popup-reviews-table__row .cell.stars .cell-inner {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 @media (max-width: 900px) {
@@ -1306,16 +1307,6 @@ body.lock {
     align-items: start;
     gap: 5px;
     padding: 5px !important;
-    background-color: #EEEEEE;
-  }
-}
-@media (max-width: 768px) {
-  .popup-reviews-table__row .cell::before {
-    content: attr(aria-label);
-    text-align: start;
-    color: #797979;
-    font-weight: bold;
-    font-size: 11px;
   }
 }
 
