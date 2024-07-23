@@ -86,6 +86,13 @@ document.addEventListener("DOMContentLoaded", () =>{
           }, 500);
         }
       }
+
+      el.onmouseleave = function(event) {
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+          el.classList.remove('scroll');
+        }, 500);
+      }
     });
   })();
 });
