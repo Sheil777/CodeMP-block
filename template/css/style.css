@@ -1443,6 +1443,23 @@ body.lock {
   display: flex;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .popup-codemp-analysis-main__header, .popup-codemp-analysis-main__row {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .popup-codemp-analysis-main__header .codemp-cell, .popup-codemp-analysis-main__row .codemp-cell {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    min-height: 36px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+  }
+  .popup-codemp-analysis-main__header .codemp-cell:last-child, .popup-codemp-analysis-main__row .codemp-cell:last-child {
+    border-bottom: 0;
+  }
+}
 .popup-codemp-analysis-main__header .codemp-customer, .popup-codemp-analysis-main__row .codemp-customer {
   flex: 0 0 305px;
   padding-left: 38px;
@@ -1513,12 +1530,19 @@ body.lock {
   }
 }
 @media (max-width: 768px) {
+  .popup-codemp-analysis-main__row .codemp-cell {
+    flex: unset;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
   .popup-codemp-analysis-main__row .codemp-cell::before {
     content: attr(aria-label);
     text-align: start;
-    color: #797979;
-    font-weight: bold;
-    font-size: 11px;
+    color: black;
+    font-size: 14px;
   }
 }
 .popup-codemp-analysis-main__row .codemp-niche img {

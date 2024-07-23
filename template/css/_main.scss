@@ -1599,6 +1599,24 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+
+    .codemp-cell {
+      @media (max-width: 768px) {
+        padding-right: 00px !important;
+        padding-left: 00px !important;
+        min-height: 36px;
+        align-items: center;
+
+        border-bottom: 1px solid lightgray;
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
     .codemp-customer {
       flex: 0 0 305px;
       padding-left: 38px;
@@ -1667,14 +1685,19 @@
     }
 
     .codemp-cell {
+      @media (max-width: 768px) {
+        flex: unset;  
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
       &::before {
-        
         @media (max-width: 768px) {
           content: attr(aria-label);
           text-align: start;
-          color: #797979;
-          font-weight: bold;
-          font-size: 11px;
+          color: black;
+          font-size: 14px;
         }
       }
     }
