@@ -95,4 +95,11 @@ document.addEventListener("DOMContentLoaded", () =>{
       }
     });
   })();
+
+  // Переключение выделения покупателей
+  document.querySelectorAll('.codemp-select').forEach(element => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('codemp-on');
+    })
+  });
 });

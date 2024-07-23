@@ -1726,13 +1726,37 @@
     }
 
     .codemp-select {
-      img {
+      flex: unset;
+
+      img, svg {
         height: 32px;
         cursor: pointer;
       }
 
       .codemp-img-on {
         display: none;
+
+        path {
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          path {
+            fill: #e4b01f;
+          }
+        }
+      }
+
+      .codemp-img-off {
+        path {
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          path {
+            stroke: #FDCA40;
+          }
+        }
       }
 
       &.codemp-on {

@@ -1563,12 +1563,27 @@ body.lock {
 .popup-codemp-analysis-main__row .codemp-niche.codemp-true img {
   display: block;
 }
-.popup-codemp-analysis-main__row .codemp-select img {
+.popup-codemp-analysis-main__row .codemp-select {
+  flex: unset;
+}
+.popup-codemp-analysis-main__row .codemp-select img, .popup-codemp-analysis-main__row .codemp-select svg {
   height: 32px;
   cursor: pointer;
 }
 .popup-codemp-analysis-main__row .codemp-select .codemp-img-on {
   display: none;
+}
+.popup-codemp-analysis-main__row .codemp-select .codemp-img-on path {
+  transition: all 0.3s;
+}
+.popup-codemp-analysis-main__row .codemp-select .codemp-img-on:hover path {
+  fill: #e4b01f;
+}
+.popup-codemp-analysis-main__row .codemp-select .codemp-img-off path {
+  transition: all 0.3s;
+}
+.popup-codemp-analysis-main__row .codemp-select .codemp-img-off:hover path {
+  stroke: #FDCA40;
 }
 .popup-codemp-analysis-main__row .codemp-select.codemp-on .codemp-img-on {
   display: block;
