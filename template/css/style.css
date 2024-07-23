@@ -915,6 +915,23 @@ body.lock {
   padding: 16px;
   padding-bottom: 0;
 }
+.popup-codemp-unit__list {
+  max-height: 400px;
+  padding-bottom: 16px;
+  overflow-y: auto;
+}
+.popup-codemp-unit__list::-webkit-scrollbar {
+  width: 6px;
+}
+.popup-codemp-unit__list::-webkit-scrollbar-thumb {
+  background: #848484;
+  -webkit-border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .popup-codemp-unit__list {
+    max-height: 70vh;
+  }
+}
 
 .popup-reviews-header {
   display: flex;
@@ -1299,23 +1316,6 @@ body.lock {
     text-align: center;
   }
 }
-.popup-reviews-table__list {
-  max-height: 400px;
-  padding-bottom: 16px;
-  overflow-y: auto;
-}
-.popup-reviews-table__list::-webkit-scrollbar {
-  width: 6px;
-}
-.popup-reviews-table__list::-webkit-scrollbar-thumb {
-  background: #848484;
-  -webkit-border-radius: 8px;
-}
-@media (max-width: 768px) {
-  .popup-reviews-table__list {
-    max-height: 70vh;
-  }
-}
 .popup-reviews-table__row {
   background: white;
   border-radius: 8px;
@@ -1373,6 +1373,11 @@ body.lock {
   padding-bottom: 16px;
   padding-left: 12px;
 }
+@media (max-width: 900px) {
+  .popup-codemp-analysis-main__description {
+    padding-right: 20px;
+  }
+}
 .popup-codemp-analysis-main__description img {
   width: 28px;
 }
@@ -1404,6 +1409,9 @@ body.lock {
 }
 .popup-codemp-analysis-main__search .codemp-form input[type=text]::placeholder {
   font-size: 14px;
+}
+.popup-codemp-analysis-main__search .codemp-form input[type=text]:focus {
+  outline: 1px solid #FDCA40;
 }
 .popup-codemp-analysis-main__search .codemp-form .codemp-submit {
   display: flex;
@@ -1438,15 +1446,41 @@ body.lock {
 .popup-codemp-analysis-main__header .codemp-customer, .popup-codemp-analysis-main__row .codemp-customer {
   flex: 0 0 305px;
   padding-left: 38px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (max-width: 1130px) {
+  .popup-codemp-analysis-main__header .codemp-customer, .popup-codemp-analysis-main__row .codemp-customer {
+    flex: 0 0 180px;
+    padding-left: 28px;
+  }
 }
 .popup-codemp-analysis-main__header .codemp-count, .popup-codemp-analysis-main__row .codemp-count {
   flex: 0 0 175px;
 }
+@media (max-width: 900px) {
+  .popup-codemp-analysis-main__header .codemp-count, .popup-codemp-analysis-main__row .codemp-count {
+    flex: 0 0 120px;
+    padding-right: 20px;
+  }
+}
 .popup-codemp-analysis-main__header .codemp-sum, .popup-codemp-analysis-main__row .codemp-sum {
   flex: 0 0 175px;
 }
+@media (max-width: 900px) {
+  .popup-codemp-analysis-main__header .codemp-sum, .popup-codemp-analysis-main__row .codemp-sum {
+    flex: 0 0 120px;
+    padding-right: 20px;
+  }
+}
 .popup-codemp-analysis-main__header .codemp-niche, .popup-codemp-analysis-main__row .codemp-niche {
   flex: 0 0 175px;
+}
+@media (max-width: 1130px) {
+  .popup-codemp-analysis-main__header .codemp-niche, .popup-codemp-analysis-main__row .codemp-niche {
+    flex: 0 0 140px;
+    padding-right: 38px;
+  }
 }
 .popup-codemp-analysis-main__header .codemp-select, .popup-codemp-analysis-main__row .codemp-select {
   flex: 1;
@@ -1458,11 +1492,34 @@ body.lock {
   font-size: 14px;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .popup-codemp-analysis-main__header {
+    display: none;
+  }
+}
+.popup-codemp-analysis-main__list {
+  overflow-y: auto;
+  max-height: 320px;
+}
 .popup-codemp-analysis-main__row {
   background-color: white;
   min-height: 72px;
   border-radius: 8px;
   margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .popup-codemp-analysis-main__row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .popup-codemp-analysis-main__row .codemp-cell::before {
+    content: attr(aria-label);
+    text-align: start;
+    color: #797979;
+    font-weight: bold;
+    font-size: 11px;
+  }
 }
 .popup-codemp-analysis-main__row .codemp-niche img {
   display: none;
@@ -1470,6 +1527,19 @@ body.lock {
 }
 .popup-codemp-analysis-main__row .codemp-niche.codemp-true img {
   display: block;
+}
+.popup-codemp-analysis-main__row .codemp-select img {
+  height: 32px;
+  cursor: pointer;
+}
+.popup-codemp-analysis-main__row .codemp-select .codemp-img-on {
+  display: none;
+}
+.popup-codemp-analysis-main__row .codemp-select.codemp-on .codemp-img-on {
+  display: block;
+}
+.popup-codemp-analysis-main__row .codemp-select.codemp-on .codemp-img-off {
+  display: none;
 }
 
 .button-feedback {
