@@ -991,6 +991,11 @@
     padding-bottom: 16px;
 
     overflow-y: auto;
+    width: 100%;
+    padding-right: 6px;
+    box-sizing: unset;
+
+    transition: padding 0.2s;
 
     // Scroll
     &::-webkit-scrollbar {
@@ -1002,6 +1007,10 @@
       -webkit-border-radius: 8px;
       // -webkit-width: 5px;
       // border: 3px solid #403F4E;
+    }
+
+    &.scroll {
+      padding-right: 0;
     }
 
 
@@ -1389,7 +1398,7 @@
 //// Ячейки
 
 .popup-reviews-table {
-
+  overflow: hidden;
 
   &__header {
     display: flex;
@@ -1593,6 +1602,7 @@
 
   &__table {
     margin-top: 24px;
+    overflow: hidden;
   }
 
   &__header, &__row {

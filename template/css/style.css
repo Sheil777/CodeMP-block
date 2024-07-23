@@ -919,6 +919,10 @@ body.lock {
   max-height: 400px;
   padding-bottom: 16px;
   overflow-y: auto;
+  width: 100%;
+  padding-right: 6px;
+  box-sizing: unset;
+  transition: padding 0.2s;
 }
 .popup-codemp-unit__list::-webkit-scrollbar {
   width: 6px;
@@ -926,6 +930,9 @@ body.lock {
 .popup-codemp-unit__list::-webkit-scrollbar-thumb {
   background: #848484;
   -webkit-border-radius: 8px;
+}
+.popup-codemp-unit__list.scroll {
+  padding-right: 0;
 }
 @media (max-width: 768px) {
   .popup-codemp-unit__list {
@@ -1293,6 +1300,9 @@ body.lock {
   box-sizing: border-box;
 }
 
+.popup-reviews-table {
+  overflow: hidden;
+}
 .popup-reviews-table__header {
   display: flex;
   align-items: stretch;
@@ -1438,6 +1448,7 @@ body.lock {
 }
 .popup-codemp-analysis-main__table {
   margin-top: 24px;
+  overflow: hidden;
 }
 .popup-codemp-analysis-main__header, .popup-codemp-analysis-main__row {
   display: flex;

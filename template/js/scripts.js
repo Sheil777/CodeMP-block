@@ -55,4 +55,37 @@ document.addEventListener("DOMContentLoaded", () =>{
       frame.classList.add('codemp-frame__server-error');
     });
   }
+
+  // Появляющийся скролл
+  (function(timer) {
+    var els = document.querySelectorAll('.popup-codemp-unit__list');
+    els.forEach(el => {
+      el.addEventListener('scroll', function(e) {
+        (function(el) {
+          el.classList.add('scroll');
+          clearTimeout(timer);
+          timer = setTimeout(function() {
+            el.classList.remove('scroll');
+          }, 1000);
+        })(el)
+      })
+
+      el.onmousemove = function(event) {
+        var targetCoords = el.getBoundingClientRect(); // Отступ от левой части
+        var xCoord = targetCoords.left;
+
+        let posCursor = event.pageX - xCoord;
+
+        if (posCursor > el.clientWidth - 30) {
+          clearTimeout(timer);
+          el.classList.add('scroll');
+        }else{
+          clearTimeout(timer);
+          timer = setTimeout(function() {
+            el.classList.remove('scroll');
+          }, 500);
+        }
+      }
+    });
+  })();
 });
