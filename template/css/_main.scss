@@ -5,13 +5,6 @@
   position: relative; // Чтобы выпадающий список был сверху нижних блоков
   z-index: 70;
   
-  // Нужно удалить при вставке на реальный сайт
-  // padding-top: 80px;
-  // height: 250px;
-  // @container (max-width: 540px) {
-  //   height: 500px;
-  // }
-  /////////////////////////////////////////////
 
   &__container {
     display: flex;
@@ -19,7 +12,7 @@
     border-radius: 17px;
     min-height: 77px;
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
       flex-wrap: wrap;
     }
   }
@@ -35,7 +28,7 @@
       min-height: 30px;
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
       box-sizing: border-box;
     }
   }  
@@ -46,16 +39,17 @@
     color: rgba(255,255,255,0.5);
     margin-bottom: 10px;
 
-    // @container (max-width: 765px) {
-    //   min-height: 25px;
-    //   margin-bottom: 0;
-    // }
-
-    @container (max-width: 650px) {
+    @container (max-width: 810px) {
+      min-height: 25px;
+      margin-bottom: 0;
+    }
+    @container (max-width: 740px) {
       margin-bottom: 5px;
     }
+    
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
+      margin-bottom: 5px;
       min-height: auto;
     }
 
@@ -97,7 +91,7 @@
         height: 30px;
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         margin-right: 14px;
         height: 40px;
       }
@@ -126,7 +120,7 @@
         display: none;
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         display: block;
       }
 
@@ -148,7 +142,7 @@
       flex: 0 0 26px;
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
       box-sizing: border-box;
       flex: 0 0 164px;
       // flex: 0 0 158px;
@@ -161,6 +155,8 @@
   }
 
   &__limit {
+    flex: 0 0 187px;
+
     .button {
       position: relative;
       display: flex;
@@ -169,7 +165,7 @@
 
       background-color: #FDCA40;
       border-radius: 7px;
-      width: 178px;
+      width: 100%;
       height: 30px;
 
       transition: background-color 0.3s;
@@ -188,7 +184,7 @@
         width: 140px;
       }
 
-      @container (max-width: 600px) {
+      @container (max-width: 740px) {
         width: 96px;
 
         &:has(.loading){
@@ -196,7 +192,7 @@
         }
       }
       
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         width: 140px;
         &:has(.loading) {
           background-color: #FDCA40;
@@ -228,12 +224,12 @@
         &.loading {
           display: block;
 
-          @container (max-width: 600px) {
+          @container (max-width: 700px) {
             right: 50%;
             transform: translateX(50%) translateY(-50%);
           }
 
-          @container (max-width: 540px) {
+          @container (max-width: 580px) {
             right: 5%;
             transform: translateY(-50%);
           }
@@ -263,7 +259,11 @@
       }  
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 940px) {
+      flex: 1;
+    }
+
+    @container (max-width: 580px) {
       flex: 0 0 160px;      
     }
 
@@ -273,11 +273,35 @@
   }
 
   &__coincidences {
+    .register {
+      gap: 7px;
+      
+      &__img {
+        height: 20px;
+      }
+
+      &__value {
+        padding-left: 6px;
+      }
+    }
+
+    @container (max-width: 920px) {
+      flex: 0 0 150px;
+    }
+
     @container (max-width: 760px) {
       flex: 0 0 90px;
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 660px) {
+      flex: 0 0 100px;
+
+      .register {
+        flex-wrap: wrap;
+      }
+    }
+
+    @container (max-width: 580px) {
       flex: 1;
 
       & + .frame__delimiter {
@@ -322,7 +346,19 @@
       flex: 0 0 90px;
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 625px) {
+      flex: 0 0 120px;
+
+      .register {
+        flex-wrap: wrap;
+
+        &__item {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    @container (max-width: 580px) {
       flex: 0 0 164px;
       // flex: 0 0 158px;
     }
@@ -353,7 +389,7 @@
       flex: 0 0 70px;
     }
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
       flex: 0 0 160px;    
       
       .frame__header {
@@ -394,6 +430,11 @@
 
       transition: all 0.4s;
 
+      @container (max-width: 690px) {
+        text-align: start;
+        padding-left: 10px;
+      }
+
       span {
 
       }
@@ -418,11 +459,17 @@
         }
       }
     }
+
+    @container (max-width: 690px) {
+      flex: 0 0 105px;
+    }
+
+    @container (max-width: 580px) {
+      flex: 1;
+    }
   }
 
   &__instruction {
-    flex-shrink: 0;
-
     a {
       display: flex;
       flex-wrap: wrap;
@@ -440,7 +487,7 @@
           display: none;
         }
 
-        @container (max-width: 540px) {
+        @container (max-width: 580px) {
           display: block;
         }
 
@@ -460,6 +507,30 @@
       &:hover {
         span {
           color: #D32322;
+        }
+      }
+    }
+
+    @container (max-width: 980px) {
+      .codemp-content {
+        span {
+          display: none;
+        }
+      }
+    }
+
+    @container (max-width: 920px) {
+      .codemp-content {
+        span {
+          display: block;
+        }
+      }
+    }
+    
+    @container (max-width: 840px) {
+      .codemp-content {
+        span {
+          display: none;
         }
       }
     }
@@ -574,6 +645,7 @@
     color: white;
     font-size: 11px;
     min-width: 25px;
+    padding-left: 2px;
   }
 }
 
@@ -731,7 +803,7 @@
     font-size: 11px;
     font-weight: 400;
 
-    @container (max-width: 540px) {
+    @container (max-width: 580px) {
       // border: 1px solid #FDCA40;
       box-shadow: 0px 0px 8px 0px #FDCA40;
     }
@@ -761,7 +833,7 @@
         }
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         flex: 1 1 300px;
         
         &__input {
@@ -805,11 +877,19 @@
     }
 
     .frame__analys {
-      @container (max-width: 710px) {
-        flex: 0 0 90px;
+      @container (max-width: 610px) {
+        flex: 0 0 118px;
+
+        .register {
+          flex-wrap: wrap;
+          
+          &__item {
+            margin-bottom: 5px;
+          }
+        }
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         flex: 0 0 164px;
       }
 
@@ -845,7 +925,7 @@
         }
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         flex: 0 0 130px;
 
         .frame__header {
@@ -871,12 +951,27 @@
 
   &.codemp-frame__before-analys {
     .frame__header {
+      @container (max-width: 790px) {
+        min-height: 24px;
+        margin-bottom: 5px;
+      }
+
       @container (max-width: 410px) {
         min-height: 24px;
       }
     }
 
     .frame__analys {
+      .register {
+        @container (max-width: 630px) {
+          flex-wrap: wrap;
+        }
+
+        &__item {
+          margin-bottom: 5px;
+        }
+      }
+
       .register__img {
         display: none;
 
@@ -888,6 +983,10 @@
       .register__value {
         visibility: hidden;
       }
+
+      @container (max-width: 630px) {
+        flex: 0 0 120px;
+      }
     }
 
     .frame__coincidences {
@@ -898,6 +997,9 @@
       .start-analys {
         display: flex;
       }
+    }
+
+    .frame__instruction {
     }
   }
 
@@ -919,7 +1021,7 @@
         flex: 0 0 90px;
       }
 
-      @container (max-width: 540px) {
+      @container (max-width: 580px) {
         flex: 1;
       }
 
@@ -955,7 +1057,7 @@
     }
 
     @media (max-width: 768px) {
-      width: 540px;
+      width: 580px;
       border-radius: 0;
     }
 
