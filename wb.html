@@ -6435,6 +6435,7 @@
                                             </section>
                                         </div>
                                         
+                                        
 
                                         <div class="frame codemp-frame__start">
                                             <div class="frame__container _container">
@@ -6462,8 +6463,8 @@
                                                         <span>Лимит проверок: 5/10</span>
                                                         <img src="./template/image/icons/question.svg" alt="Знак вопроса">
                                                         <div class="clue">
-                                                            <div class="clue__inner">
-                                                                Лимит обновляется каждые 3 часа
+                                                            <div class="clue__inner p17">
+                                                                Лимит обновляется каждые <span class="codemp-gold">3</span> часа
                                                             </div>
                                                         </div>
                                                     </h3>
@@ -6477,12 +6478,12 @@
                                                     <h3 class="frame__header">Совпадений найдено</h3>
                                                     <div class="register">
                                                         <div class="register__item">
-                                                            <img class="register__img h16" src="./template/image/icons/message.svg" alt="Иконка отзывов">
-                                                            <span class="register__value">249</span>
+                                                            <img class="register__img" src="./template/image/icons/message.svg" alt="Иконка отзывов">
+                                                            <span class="register__value">58740</span>
                                                         </div>
                                                         <div class="register__item">
-                                                            <img class="register__img h16" src="./template/image/icons/human.svg" alt="Иконка аккаунта">
-                                                            <span class="register__value">34</span>
+                                                            <img class="register__img" src="./template/image/icons/human.svg" alt="Иконка аккаунта">
+                                                            <span class="register__value">990</span>
                                                         </div>
                                                     </div>
                                                     <div class="start-analys">
@@ -6500,7 +6501,18 @@
                                                         <img src="./template/image/icons/question.svg" alt="Знак вопроса">
                                                         <div class="clue">
                                                             <div class="clue__inner">
-                                                                Подсказка
+                                                                <div class="clue__row">
+                                                                    <img src="./template/image/icons/clue1.svg" alt="Иконка мышонка">
+                                                                    <div class="clue__text">конкурент?</div>
+                                                                </div>
+                                                                <div class="clue__row">
+                                                                    <img src="./template/image/icons/clue2.svg" alt="Подозрительная иконка">
+                                                                    <div class="clue__text">подозрительный аккаунт</div>
+                                                                </div>
+                                                                <div class="clue__row">
+                                                                    <img src="./template/image/icons/clue3.svg" alt="Иконка монет">
+                                                                    <div class="clue__text">возможно раздачи/сервис</div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </h3>
@@ -6511,13 +6523,13 @@
                                                             <span class="register__value">4</span>
                                                         </div>
                                                         <div class="register__item">
-                                                            <img class="register__img" src="./template/image/icons/money.svg" alt="Денежки">
-                                                            <img class="register__img_disable" src="./template/image/icons/money-disable.svg" alt="Денежки">
+                                                            <img class="register__img" src="./template/image/icons/money.svg" alt="Подозрительный">
+                                                            <img class="register__img_disable" src="./template/image/icons/money-disable.svg" alt="Подозрительный">
                                                             <span class="register__value">10</span>
                                                         </div>
                                                         <div class="register__item">
-                                                            <img class="register__img" src="./template/image/icons/human-circle.svg" alt="Человек">
-                                                            <img class="register__img_disable" src="./template/image/icons/human-circle-disable.svg" alt="Человек">
+                                                            <img class="register__img" src="./template/image/icons/coin.svg" alt="Монетки">
+                                                            <img class="register__img_disable" src="./template/image/icons/coin-disable.svg" alt="Монетки">
                                                             <span class="register__value">20</span>
                                                         </div>
                                                     </div>
@@ -6525,59 +6537,37 @@
                                 
                                                 <div class="frame__delimiter"></div>
                                 
-                                                <section class="frame__column frame__download">
+                                                <section class="frame__column frame__competitor-analysis">
                                                     <h3 class="frame__header">
-                                                        <span>Скачать отзывы</span>
-                                                        <img src="./template/image/icons/question.svg" alt="Знак вопроса">
-                                                        <div class="clue">
-                                                            <div class="clue__inner">
-                                                                Подсказка
-                                                            </div>
-                                                        </div>
+                                                        <span>Анализ конкурентов</span>
                                                     </h3>
-                                                    <div class="frame-download">
-                                                        <div class="frame-download__select">1,2,3,4,5</div>
-                                                        <img src="./template/image/icons/download.svg" class="frame-download__button">
-                                                        <div class="frame-download__submenu">
-                                                            <div class="frame-download__list">
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackAll" class="frame-download__input" name="loadFeedback" type="checkbox" value="all">
-                                                                    <label class="frame-download__label" for="loadFeedbackAll">Все</label>
-                                                                </div>
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackOne" class="frame-download__input" name="loadFeedback" type="checkbox" value="one">
-                                                                    <label class="frame-download__label" for="loadFeedbackOne">1 звезда</label>
-                                                                </div>
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackTwo" class="frame-download__input" name="loadFeedback" type="checkbox" value="two">
-                                                                    <label class="frame-download__label" for="loadFeedbackTwo">2 звезды</label>
-                                                                </div>
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackThree" class="frame-download__input" name="loadFeedback" type="checkbox" value="three">
-                                                                    <label class="frame-download__label" for="loadFeedbackThree">3 звезды</label>
-                                                                </div>
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackFour" class="frame-download__input" name="loadFeedback" type="checkbox" value="four">
-                                                                    <label class="frame-download__label" for="loadFeedbackFour">4 звезды</label>
-                                                                </div>
-                                                                <div class="frame-download__item">
-                                                                    <input id="loadFeedbackFive" class="frame-download__input" name="loadFeedback" type="checkbox" value="five">
-                                                                    <label class="frame-download__label" for="loadFeedbackFive">5 звезд</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="codemp-content">
+                                                        <a href="#popup-codemp-analysis" class="competitor-analysis__button popup-link">
+                                                            <span>Открыть</span>
+                                                            <svg viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.24268 1L5.48532 5.24264L1.24268 9.48528" stroke="white"/>
+                                                            </svg>                            
+                                                        </a>
                                                     </div>
                                                 </section>
+                                
                                                 <div class="frame__delimiter"></div>
                                                 <section class="frame__column frame__instruction">
                                                     <h3 class="frame__header">Как это работает?</h3>
-                                                    <a href="#">
-                                                        <span>Инструкция</span>
-                                                        <img src="./template/image/icons/youtube.png" alt="YouTube">
-                                                    </a>
+                                                    <div class="codemp-content">
+                                                        <a href="#">
+                                                            <span>Видео - инструкция</span>
+                                                            <img src="./template/image/icons/youtube.png" alt="YouTube">
+                                                        </a>
+                                                    </div>
                                                 </section>
                                             </div>
                                         </div>
+
+
+
+
+
 
                                         <div class="product-feedbacks__sorting sorting sorting--custom">
                                             <button type=button

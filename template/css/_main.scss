@@ -134,13 +134,13 @@
     }
 
     @container (max-width: 920px) {
-      flex: 0 0 36px;
+      flex: 0 0 53px;
       padding-left: 10px;
     }
 
-    @container (max-width: 600px) {
-      flex: 0 0 26px;
-    }
+    // @container (max-width: 600px) {
+    //   flex: 0 0 26px;
+    // }
 
     @container (max-width: 580px) {
       flex: 0 0 170px;
@@ -289,9 +289,9 @@
       flex: 0 0 150px;
     }
 
-    @container (max-width: 760px) {
-      flex: 0 0 90px;
-    }
+    // @container (max-width: 760px) {
+    //   flex: 0 0 90px;
+    // }
 
     @container (max-width: 660px) {
       flex: 0 0 100px;
@@ -339,12 +339,12 @@
     padding-right: 0;
 
     @container (max-width: 790px) {
-      flex: 0 0 140px;
+      flex: 0 0 168px;
     }
 
-    @container (max-width: 690px) {
-      flex: 0 0 90px;
-    }
+    // @container (max-width: 690px) {
+    //   flex: 0 0 90px;
+    // }
 
     @container (max-width: 625px) {
       flex: 0 0 120px;
@@ -792,16 +792,43 @@
   &__inner {
     background-color: #403F4E;
     border-radius: 6px;
-    padding: 15px 10px;
+    padding: 6px 8px;
     color: white;
+    width: max-content;
+    // min-height: 46px;
     
     font-family: 'SF Pro Display', sans-serif;
     font-size: 11px;
     font-weight: 400;
 
+    &.p17 {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+
+    span.codemp-gold {
+      color: rgb(245, 204, 92);
+    }
+
     @container (max-width: 580px) {
       // border: 1px solid #FDCA40;
       box-shadow: 0px 0px 8px 0px #FDCA40;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 6px;
+
+    img {
+      height: 14px;
+      cursor: default;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -1970,11 +1997,15 @@
 .button-feedback {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 10px 5px 8px;
-  border-radius: 7px;
-  background-color: #403F4E;
-  width: fit-content;
+  // justify-content: start;
+  gap: 3px;
+  padding: 3px 7px 3px 4px;
+  border-radius: 35px;
+  min-width: 61px;
+  
+  background: linear-gradient(0.00deg, rgba(64, 63, 78, 0) 31.818%,rgba(255, 255, 255, 0.4) 100%),rgb(64, 63, 78);
+
+  // width: fit-content;
   cursor: pointer;
 
   &__block {
@@ -1993,22 +2024,24 @@
   &__count {
     font-size: 11px;
     color: white;
+    margin-right: auto;
   }
 
   &.empty {
-    background-color: #DEDEDE;
+    background: rgb(158, 158, 167);;
     cursor: default;
+    min-width: 50px;
 
-    .button-feedback__img path {
-      fill: #505356;
-    }
+    // .button-feedback__img path {
+    //   fill: #505356;
+    // }
 
     .button-feedback__count {
-      color: #505356;
+      // color: #505356;
     }
 
     svg path {
-      fill: #403F4E;
+      fill: white;
     }
   }
 }

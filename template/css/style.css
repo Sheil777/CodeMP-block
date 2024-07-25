@@ -221,13 +221,8 @@ body.lock {
 }
 @container (max-width: 920px) {
   .frame__logo {
-    flex: 0 0 36px;
+    flex: 0 0 53px;
     padding-left: 10px;
-  }
-}
-@container (max-width: 600px) {
-  .frame__logo {
-    flex: 0 0 26px;
   }
 }
 @container (max-width: 580px) {
@@ -360,11 +355,6 @@ body.lock {
     flex: 0 0 150px;
   }
 }
-@container (max-width: 760px) {
-  .frame__coincidences {
-    flex: 0 0 90px;
-  }
-}
 @container (max-width: 660px) {
   .frame__coincidences {
     flex: 0 0 100px;
@@ -404,12 +394,7 @@ body.lock {
 }
 @container (max-width: 790px) {
   .frame__analys {
-    flex: 0 0 140px;
-  }
-}
-@container (max-width: 690px) {
-  .frame__analys {
-    flex: 0 0 90px;
+    flex: 0 0 168px;
   }
 }
 @container (max-width: 625px) {
@@ -797,16 +782,38 @@ body.lock {
 .clue__inner {
   background-color: #403F4E;
   border-radius: 6px;
-  padding: 15px 10px;
+  padding: 6px 8px;
   color: white;
+  width: -moz-max-content;
+  width: max-content;
   font-family: "SF Pro Display", sans-serif;
   font-size: 11px;
   font-weight: 400;
+}
+.clue__inner.p17 {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.clue__inner span.codemp-gold {
+  color: rgb(245, 204, 92);
 }
 @container (max-width: 580px) {
   .clue__inner {
     box-shadow: 0px 0px 8px 0px #FDCA40;
   }
+}
+.clue__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 6px;
+}
+.clue__row img {
+  height: 14px;
+  cursor: default;
+}
+.clue__row:last-child {
+  margin-bottom: 0;
 }
 
 @container (max-width: 804px) {
@@ -1762,12 +1769,11 @@ body.lock {
 .button-feedback {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 10px 5px 8px;
-  border-radius: 7px;
-  background-color: #403F4E;
-  width: -moz-fit-content;
-  width: fit-content;
+  gap: 3px;
+  padding: 3px 7px 3px 4px;
+  border-radius: 35px;
+  min-width: 61px;
+  background: linear-gradient(0deg, rgba(64, 63, 78, 0) 31.818%, rgba(255, 255, 255, 0.4) 100%), rgb(64, 63, 78);
   cursor: pointer;
 }
 .button-feedback__block {
@@ -1784,19 +1790,15 @@ body.lock {
 .button-feedback__count {
   font-size: 11px;
   color: white;
+  margin-right: auto;
 }
 .button-feedback.empty {
-  background-color: #DEDEDE;
+  background: rgb(158, 158, 167);
   cursor: default;
-}
-.button-feedback.empty .button-feedback__img path {
-  fill: #505356;
-}
-.button-feedback.empty .button-feedback__count {
-  color: #505356;
+  min-width: 50px;
 }
 .button-feedback.empty svg path {
-  fill: #403F4E;
+  fill: white;
 }
 
 /* Сам WB */
