@@ -555,7 +555,7 @@ body.lock {
 .frame__instruction a:hover span {
   color: #D32322;
 }
-@container (max-width: 980px) {
+@container (max-width: 942px) {
   .frame__instruction .codemp-content span {
     display: none;
   }
@@ -575,7 +575,7 @@ body.lock {
     display: block;
   }
 }
-@container (max-width: 505px) {
+@container (max-width: 468px) {
   .frame__instruction .codemp-content span {
     display: none;
   }

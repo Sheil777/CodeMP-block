@@ -524,7 +524,7 @@
 
     .codemp-content {
       span {
-        @container (max-width: 980px) {
+        @container (max-width: 942px) {
           display: none;
         }
 
@@ -540,7 +540,7 @@
           display: block;
         }
 
-        @container (max-width: 505px) {
+        @container (max-width: 468px) {
           display: none;
         }
       }
