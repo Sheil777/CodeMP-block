@@ -286,7 +286,7 @@ body.lock {
 }
 .frame__limit .button span {
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s;
 }
 .frame__limit .button img {
@@ -1029,6 +1029,15 @@ body.lock {
 }
 .frame.codemp-frame__server-error .frame__coincidences .codemp-error {
   display: block;
+}
+.frame.codemp-frame__server-error .frame__analys .register__img {
+  display: none;
+}
+.frame.codemp-frame__server-error .frame__analys .register__img_disable {
+  display: block;
+}
+.frame.codemp-frame__server-error .frame__analys .register__value {
+  visibility: hidden;
 }
 
 .popup-codemp-unit__content {

@@ -209,7 +209,7 @@
 
       span {
         font-size: 11px;
-        font-weight: bold;
+        font-weight: 600;
         transition: all 0.3s;
       }
 
@@ -1096,6 +1096,20 @@
 
       .codemp-error {
         display: block;
+      }
+    }
+
+    .frame__analys {
+      .register__img {
+        display: none;
+
+        &_disable {
+          display: block;
+        }
+      }
+
+      .register__value {
+        visibility: hidden;
       }
     }
   }
