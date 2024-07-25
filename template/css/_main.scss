@@ -338,6 +338,17 @@
     flex: 0 1 171px;
     padding-right: 0;
 
+
+    .frame__header {
+      @container (max-width: 625px) {
+        max-width: 95px;
+      }
+
+      @container (max-width: 580px) {
+        max-width: unset;
+      }
+    }
+
     @container (max-width: 790px) {
       flex: 0 0 168px;
     }
@@ -788,6 +799,14 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
+
+  @container (max-width: 740px) {
+    right: -50px;
+  }
+
+  @container (max-width: 580px) {
+    right: -20px;
+  }
 
   &__inner {
     background-color: #403F4E;

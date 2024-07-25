@@ -392,6 +392,16 @@ body.lock {
   flex: 0 1 171px;
   padding-right: 0;
 }
+@container (max-width: 625px) {
+  .frame__analys .frame__header {
+    max-width: 95px;
+  }
+}
+@container (max-width: 580px) {
+  .frame__analys .frame__header {
+    max-width: unset;
+  }
+}
 @container (max-width: 790px) {
   .frame__analys {
     flex: 0 0 168px;
@@ -778,6 +788,16 @@ body.lock {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
+}
+@container (max-width: 740px) {
+  .clue {
+    right: -50px;
+  }
+}
+@container (max-width: 580px) {
+  .clue {
+    right: -20px;
+  }
 }
 .clue__inner {
   background-color: #403F4E;
