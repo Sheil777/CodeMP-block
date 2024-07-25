@@ -94,7 +94,7 @@ body.lock {
 .frame__container {
   display: flex;
   background-color: #403F4E;
-  border-radius: 17px;
+  border-radius: 12px;
   min-height: 77px;
 }
 @container (max-width: 580px) {
